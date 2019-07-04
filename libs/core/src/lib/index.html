@@ -1,0 +1,2222 @@
+
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	组卷网-学科网e卷通组卷系统-智能高效在线组卷平台
+</title><meta name="applicable-device" content="pc" /><meta name="keywords" content="组卷网,e卷通组卷系统,e卷通,组卷系统,在线组卷,e卷通组卷,题库,试题库" /><meta name="description" content="组卷网(zujuan.xkw.com)依托最新超600万中小学试题库,包含全国各大名校试卷试题,知识点涵盖全国各学科版本,为广大中小学老师提供快捷在线组卷,智能组卷服务。" /><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="renderer" content="webkit" /><link rel="shortcut icon" href="/resource/image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/resource/css/dialog.css?t=20190628" />
+    <link href="/resource/css/jbox.css?t=20190628" rel="stylesheet" type="text/css" />
+    <link href="/resource/css/reset.css?t=20190628" rel="stylesheet" type="text/css" />
+    <link href="/resource/css/common.css?t=20190628" rel="stylesheet" type="text/css" />
+    <link href="/resource/css/content.css?t=20190628" rel="stylesheet" type="text/css" />
+    <link href="/resource/Static_180116/css/common.css?t=20190628" rel="stylesheet" type="text/css" />
+    <link href="/resource/Static_180116/css/exam.css" rel="stylesheet" type="text/css" />
+    <link href="/resource/Static_180116/css/iconfont.css?t=20190628" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/resource/js/baidu_statistics.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/jquery.1.9.1.min.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/v2/jquery.nicescroll.min.js?t=20190628"></script>
+    <script src="/resource/js/two-wayCheckList/ximubiao.Core.js?t=20190628"></script>
+    <script type="text/javascript">
+        $(function () {/*2016-12-09 gjz*/
+            if (top != self) {
+                var u = document.domain;
+                switch (u) {
+                    case "1.zujuan.xkw.com":
+                        break;
+                    case "zujuan.xkw.com":
+                        break;
+                    case "web.umeng.com":
+                        break;
+                    //case "huludao.wy.zujuan.com":
+                    //    break;
+                    case "huludao.zujuan.xkw.com":
+                        break;
+                    default:
+                        location.href = "http://zujuan.xkw.com/404.html";
+                }
+            }
+
+            if ($.getQueryString('out_order_no') != '') {
+                window.close()
+            }
+        });
+    </script>
+
+    <script type="text/javascript" src="/resource/js/jquery.ui.min.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/library.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/ozujuan.js?t=20190628"></script>
+    <script src="/resource/js/jquery.jBox-2.3.min.js?t=20190628" type="text/javascript"></script>
+    <script type="text/javascript" src="/resource/js/dialog.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/BeforeDefault.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/slider.js?t=20190628"></script>
+    
+    <script type="text/javascript" src="/resource/js/dropdowncontent.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/Digital-scroll.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/common.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/js/log4net.js?t=20190628"></script>
+    <script type="text/javascript" src="/resource/audio/audio.min.js"></script>
+    <style type="text/css">
+        /*
+            修复分页新旧冲突问题
+            */
+        .pagebox input {
+            padding: 1px 6px;
+        }
+
+        .box_show {
+            top: 0px;
+            position: fixed;
+            scroll: auto;
+            z-index: 99;
+        }
+
+        .ad {
+            display: none;
+            overflow: hidden;
+        }
+
+        .topad {
+            width: 100%;
+            height: 495px;
+            background: url(http://zujuan.xkw.com/resource/image/topad.jpg) no-repeat 50% 0;
+        }
+
+        .topad-s {
+            width: 100%;
+            height: 60px;
+            background: url(http://zujuan.xkw.com/resource/image/topad-s.jpg) no-repeat 50% 0;
+        }
+
+        .noques {
+            padding: 20px;
+        }
+
+        .mt50 {
+            margin-top: 50px !important;
+        }
+
+        .logout-btn {
+            position: absolute;
+            left: 959px;
+        }
+
+        /*遮罩层样式 start*/
+        body, p, ul, li {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-family: "微软雅黑";
+        }
+
+        .bg-pop {
+            background: #000;
+            display: inline-block;
+            height: 100%;
+            -webkit-opacity: 0.8;
+            -moz-opacity: 0.8;
+            filter: alpha(Opacity=80);
+            opacity: 0.8;
+            width: 100%;
+            position: fixed;
+            z-index: 1000;
+            left: 0px;
+            top: 0px;
+        }
+
+        .bg-pop-hint {
+            position: absolute;
+            z-index: 1001;
+            width: 580px;
+            background: #fff;
+        }
+
+            .bg-pop-hint h3 {
+                line-height: 40px;
+                background: #ccc;
+                margin: 0px;
+                float: left;
+                width: 100%;
+                font-weight: normal;
+            }
+
+                .bg-pop-hint h3 span {
+                    float: left;
+                    line-height: 40px;
+                    margin-left: 10px;
+                    color: #444;
+                    font-size: 16px;
+                }
+
+                .bg-pop-hint h3 a {
+                    float: right;
+                    margin-right: 10px;
+                    font-size: 30px;
+                    line-height: 35px;
+                    text-decoration: none;
+                    color: #444;
+                }
+
+            .bg-pop-hint div {
+                padding: 25px;
+                display: inline-block;
+                color: #444;
+            }
+
+            .bg-pop-hint p {
+                float: left;
+                width: 100%;
+                line-height: 30px;
+                margin-top: 5px;
+                font-size: 16px;
+                word-break: break-all;
+            }
+
+            .bg-pop-hint ul {
+                margin: 0px 10%;
+            }
+
+            .bg-pop-hint li {
+                width: 50%;
+                float: left;
+                line-height: 30px;
+            }
+
+            .bg-pop-hint p span {
+                color: #f00;
+            }
+
+            .bg-pop-hint p a {
+                color: #fff;
+                background: #169BD5;
+                font-size: 18px;
+                width: 150px;
+                line-height: 40px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+        .mt30 {
+            margin-top: 30px !important;
+        }
+
+        .tac {
+            text-align: center;
+        }
+
+        .fs14 {
+            font-size: 14px !important;
+        }
+
+        @media only screen and (min-width: 100px) and (max-width: 640px) {
+            .bg-pop-hint {
+                width: 100%;
+                left: 0px !important;
+                top: 50px !important;
+            }
+
+                .bg-pop-hint div {
+                    padding: 10px;
+                }
+
+                .bg-pop-hint ul {
+                    margin: 0px 10px;
+                }
+        }
+        /*遮罩层样式 end*/
+
+        /*试题使用 start*/
+        /*.question-text font:before { font-style: normal; content: '.'; position: absolute; width: .88em; text-align: center; font-size: 1.6em; display: block; margin-bottom: 5px; font-family: SimSun,sans-serif; bottom: -.7em; left: 0px; }*/
+        font:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 4px;
+            bottom: -4px;
+            left: 0;
+            background: url(http://zujuan.xkw.com/resource/image/dot.png) repeat-x 0 center;
+        }
+
+        .question-text font {
+            position: relative;
+        }
+        /*试题使用 end*/
+
+        /*组卷网首次登陆活动 start*/
+        .overlay {
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+            background: #000;
+        }
+
+        .popup-free {
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            z-index: 1001;
+            margin-left: -340px;
+            width: 680px;
+            background: #fff;
+        }
+
+            .popup-free .close {
+                position: absolute;
+                top: 0;
+                right: 5px;
+                font-style: normal;
+                font-size: 28px;
+                line-height: 1;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .popup-free .popup-hd {
+                height: 100px;
+                font-size: 24px;
+                line-height: 100px;
+                color: #fff;
+                text-align: center;
+                background: url(/resource/image/popup-hd.jpg) no-repeat;
+            }
+
+            .popup-free .yellow {
+                color: #fff55b;
+            }
+
+            .popup-free .popup-bd {
+                padding: 20px;
+            }
+
+            .popup-free .grade {
+                margin-bottom: 10px;
+            }
+
+                .popup-free .grade.senior {
+                    border: 1px solid #39f;
+                }
+
+                .popup-free .grade.junior {
+                    border: 1px solid #f90;
+                }
+
+                .popup-free .grade.primary {
+                    border: 1px solid #09bb63;
+                }
+
+            .popup-free .grade-hd {
+                float: left;
+                width: 50px;
+                font-size: 16px;
+                line-height: 50px;
+                color: #fff;
+                text-align: center;
+                writing-mode: tb-rl;
+                -webkit-writing-mode: vertical-rl;
+                writing-mode: vertical-rl;
+            }
+
+            .popup-free .grade.senior .grade-hd {
+                height: 90px;
+                background: #39f;
+            }
+
+            .popup-free .grade.junior .grade-hd {
+                height: 90px;
+                background: #f90;
+            }
+
+            .popup-free .grade.primary .grade-hd {
+                height: 50px;
+                background: #09bb63;
+            }
+
+            .popup-free .grade .subject {
+                margin-left: 50px;
+                padding: 5px;
+                font-size: 0;
+                overflow: hidden;
+            }
+
+                .popup-free .grade .subject a {
+                    display: inline-block;
+                    margin: 5px;
+                    width: 70px;
+                    height: 28px;
+                    font-size: 14px;
+                    line-height: 28px;
+                    text-align: center;
+                    border: 1px solid #999;
+                    background: #e6f5ff;
+                    cursor: pointer;
+                }
+
+            .popup-free .grade.senior .subject .on, .popup-free .grade.senior .subject a:hover {
+                border: 1px solid #39f;
+                color: #39f;
+            }
+
+            .popup-free .grade.junior .subject .on, .popup-free .grade.junior .subject a:hover {
+                border: 1px solid #f90;
+                color: #f90;
+            }
+
+            .popup-free .grade.primary .subject .on, .popup-free .grade.primary .subject a:hover {
+                border: 1px solid #09bb63;
+                color: #09bb63;
+            }
+
+            .popup-free .note {
+                padding: 10px;
+                font-size: 14px;
+                line-height: 30px;
+                background: #f0f0f0;
+            }
+
+            .popup-free .note-hd {
+                color: #ff5a5a;
+                margin-left: -42px;
+            }
+
+            .popup-free .note p {
+                padding-left: 42px;
+            }
+
+            .popup-free .buttons {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+                .popup-free .buttons a {
+                    display: inline-block;
+                    margin: 0 15px;
+                    padding: 0 30px;
+                    font-size: 14px;
+                    line-height: 40px;
+                    border-radius: 4px;
+                }
+
+                .popup-free .buttons .btn-confirm {
+                    color: #fff;
+                    background: #ff7200;
+                }
+
+                    .popup-free .buttons .btn-confirm:hover {
+                        background: #ff8e33;
+                    }
+
+                .popup-free .buttons .btn-cancel {
+                    color: #fff;
+                    background: #a2a2a2;
+                }
+
+                    .popup-free .buttons .btn-cancel:hover {
+                        background: #acacac;
+                    }
+        /*组卷网首次登陆活动 end*/
+    </style>
+
+    <script type="text/javascript">
+
+        function returnmurl(obj) {
+            var url = "http://m.zujuan.xkw.com/";
+            switch (obj) {
+                case "gufen":
+                    url = url + obj;
+                    break;
+                case "proscore":
+                    url = url + obj;
+                    break;
+                default:
+                    url = url;
+                    break;
+            }
+            window.location.href = url;
+        }
+
+        //!function (n) { function o(n) { for (var o = n + "=", t = document.cookie.split(";"), e = 0; e < t.length; e++) { for (var i = t[e]; " " == i.charAt(0) ;) i = i.substring(1, i.length); if (0 == i.indexOf(o)) return i.substring(o.length, i.length) } return null } var t = o("pcm"), e = n.navigator.userAgent.toLocaleLowerCase(), i = "//m.zujuan.xkw.com", r = /iphone|android|symbianos|windows\sphone/g, c = /micromessenger|qq\/[\d.]+/i; return c.test(e) ? (n.location.href = "//m.zujuan.xkw.com", !1) : r.test(e) && "1" != t ? (n.location.href = i, !1) : void 0 }(window);
+
+        //!function (n) {
+        //    //判断是否是移动端访问
+        //    if (CheckAgent()) {
+        //        if (Cookie.Get("IsJumpKey") == null) {
+        //            console.log("移动端访问");
+        //            var url = window.location.href;
+        //            var data = url.split('/');
+        //            var urlspit = data[3];
+        //            returnmurl(urlspit);
+        //            return;
+        //        }
+        //    }
+        //    console.log("PC端访问");
+        //}(window);
+    </script>
+
+    <script type="text/javascript">
+        /*支付双11活动使用*/
+        $(function () {
+            Event();
+
+            var uid = 0;
+
+            if (typeof userinfo != 'undefined') {
+                uid = userinfo.UserID;
+            }
+
+            if (compareTime($.getDateTime(), '2017-11-11 23:59:59')) {
+
+                //增加时间限制
+                if (Cookie.Get('pay11') != uid) {
+                    $('.payshow').show();
+                }
+            }
+        })
+        function Event() {
+
+            var uid = 0;
+
+            if (typeof userinfo != 'undefined') {
+                uid = userinfo.UserID;
+            }
+
+            $('.payclose').click(function () {
+                $('.overlay,.popup').remove();
+                Cookie.Set('pay11', uid, 30);
+            })
+        }
+
+        function LinkNewUrl(url) {
+            var a = document.createElement("a");
+            a.setAttribute("id", "zu");
+            a.setAttribute("href", url);
+            a.setAttribute("target", "_blank");
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        //判断日期，时间大小  
+        function compareTime(startDate, endDate) {
+            if (startDate.length > 0 && endDate.length > 0) {
+                var startDateTemp = startDate.split(" ");
+                var endDateTemp = endDate.split(" ");
+
+                var arrStartDate = startDateTemp[0].split("-");
+                var arrEndDate = endDateTemp[0].split("-");
+
+                var arrStartTime = startDateTemp[1].split(":");
+                var arrEndTime = endDateTemp[1].split(":");
+
+                var allStartDate = new Date(arrStartDate[0], arrStartDate[1], arrStartDate[2], arrStartTime[0], arrStartTime[1], arrStartTime[2]);
+                var allEndDate = new Date(arrEndDate[0], arrEndDate[1], arrEndDate[2], arrEndTime[0], arrEndTime[1], arrEndTime[2]);
+
+                if (allStartDate.getTime() >= allEndDate.getTime()) {
+                    //alert("startTime不能大于endTime，不能通过");
+                    return false;
+                } else {
+                    //alert("startTime小于endTime，所以通过了");
+                    return true;
+                }
+            } else {
+                //alert("时间不能为空");
+                return false;
+            }
+        }
+    </script>
+    
+
+    <script src="/resource/js/v2/web.index.js?t=20190628" type="text/javascript"></script>
+    <link href="/resource/Static_180116/css/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="/resource/Static_180116/css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.zujuan.xkw.com/">
+    <style type="text/css">
+        .scroll-sub {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0; /*opacity: 0;*/
+            height: 400px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    </style>
+    <!-- 新添加css-->
+    <style type="text/css">
+        .add-notice {
+            width: 132px;
+            position: fixed;
+            bottom: 20%;
+            right: 10%;
+            z-index: 1000;
+            border: 3px solid #188eee;
+            border-radius: 6px;
+        }
+
+            .add-notice .tit {
+                width: 112px;
+                height: 18px;
+                border-radius: 2px 2px 0 0;
+                background: #188eee;
+                color: #fff;
+                overflow: hidden;
+                padding: 10px;
+            }
+
+                .add-notice .tit span {
+                    width: 80px;
+                    height: 18px;
+                    display: inline-block;
+                    background: url("/resource/image/notice-ico.png") no-repeat;
+                    float: left;
+                }
+
+                .add-notice .tit .close {
+                    cursor: pointer;
+                    width: 10px;
+                    height: 10px;
+                    background: url("/resource/image/addclose.png") no-repeat;
+                    display: inline-block;
+                    float: right;
+                    margin-top: 3px;
+                }
+
+            .add-notice ul {
+                padding: 5px 20px;
+                background-color: #fff;
+            }
+
+                .add-notice ul li {
+                    width: 92px;
+                    padding: 6px 0;
+                    border-bottom: 1px dotted #999;
+                    line-height: 24px;
+                }
+
+                    .add-notice ul li a {
+                        color: #188eee;
+                    }
+
+        /*.banner-aside .news p a {
+            color: #333;
+            font-weight: bold;
+        }*/
+    </style>
+    <!-- 新添加css结束-->
+    
+    <!-- 新添加js开始-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".close").click(function () {
+                $(".add-notice").hide();
+            });
+            $("#ul1 li:last").css("border-bottom", "0");
+        });
+    </script>
+    <!-- 新添加js结束-->
+    <meta name="mobile-agent" content="format=xhtml; url=http://m.zujuan.xkw.com/">
+    <meta name="mobile-agent" content="format=html5; url= http://m.zujuan.xkw.com/ ">
+    <meta name="mobile-agent" content="format=wml; url= http://m.zujuan.xkw.com/ ">
+</head>
+<body oncopy="return false;" class="newyear">
+    
+    <div id="pagecount" style="display: none;">
+    </div>
+    <div id="header">
+        <div class="top_a">
+            <div class="top_w">
+                <div class="left">
+                    <a title="学科网 - 权威专业的教育资源门户" href="http://www.zxxk.com" target="_blank"></a>
+                </div>
+                <div class="right">
+                    <ul id="userUl">
+                        <li id="loginBtn"><a href="javascript:logindiv()" rel="nofollow" class="loginBtn">登录</a></li>
+                        <li id="exitBtn"><a href="javascript:Register()" target="_blank" rel="nofollow">注册</a></li>
+                        
+                        <li><a href="http://kf.zujuan.xkw.com/helper" target="_blank" rel="nofollow">使用帮助</a></li>
+                        <li><a href="javascript:videodiv()" rel="nofollow">视频帮助</a></li>
+                        <li><a id="qixia_b" href="#" rel="pro">产品服务</a></li>
+                        <li><a id="qixia_a" href="#" class="group" rel="subqi">旗下站点</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="subqi" class="subqi">
+        <a target="_blank" href="http://www.zxxk.com" rel="nofollow">中学学科网</a><a target="_blank" href="http://zujuan.xkw.com/">组卷网</a>
+        <a target="_blank" href="http://www.jiaoping.com/" rel="nofollow">教评网</a> <a href="http://b.zxxk.com/" target="_blank" rel="nofollow">学易书城</a>
+    </div>
+    <div id="pro" class="subqi">
+        <a href="http://kf.zujuan.xkw.com/product" target="_blank" rel="nofollow">e卷通介绍</a>
+        <a href="javascript:void(0);" id="HelpDocument" rel="nofollow">使用手册</a> <a href="javascript:Favorite();" rel="sidebar">收藏本站</a> <a href="/yijian" target="_blank" rel="nofollow">有奖挑错建议</a>
+    </div>
+    <div class="header-box">
+        <div class="wrapper clearfix">
+            <a class="logo" href="http://zujuan.xkw.com" target="_blank" title="组卷网">
+                <img src="/resource/Static_180116/image/logo.png" alt="组卷网">
+            </a>
+            <div class="header-right">
+                
+                <div class="search fl">
+                    <!--txl2019.6.3  头部加导航 start-->
+                    <div  id="SearchType" class="search-type clearfix">
+                        <a class="current" href="javascript:;" data-type="2">试题</a>
+                        <a href="javascript:;" data-type="1">试卷</a>
+                    </div>
+                    <!--txl2019.6.3  头部加导航 start-->
+                    <input id="keyword" type="text" name="searchCon" placeholder="请输入要搜索的试题内容/关键字" keywordtype="1">
+
+                    <button class="searchBtn" id="searchsubmit">
+                        <i class="icon icon-search"></i>
+                    </button>
+                </div>
+                <div class="link-icons clearfix fl">
+                    <a href="javascript:PayDialog()" class="link-pay">
+                        <i class="icon icon-pay"></i>
+                        <span>充值</span>
+                    </a>
+                    <a href="javascript:void(0);" class="wap">
+                        <i class="icon icon-mobile"></i>
+                        <span>手机站</span>
+                        <div class="mbox">
+                            <i class="arrow"></i>
+                            <img src="http://zujuan.xkw.com/resource/image/m_erweima.png">
+                            <p>手机扫一扫</p>
+                            <p>获取免费试题</p>
+                        </div>
+                    </a>
+                    <div class="newcart" id="shoppingCart">
+                        <i class="icon icon-cart" id="icon_zujuan"></i>
+                        <span class="text" id="icon_tozujuan">试题篮</span>
+                        <div class="number" id="quescount2">0</div>
+                        <div class="newcart-list">
+                            <div class="cart-list-hd">
+                                共计<span id="quescount">0</span>题，平均难度：<span id="cartquesdiff"></span>
+                            </div>
+                            <div id="quescountdetail">
+                            </div>
+                            <div class="cart-btn">
+                                <input type="button" class="deleteall" value="清空全部" id="emptybasket">
+                                <a href="/usehistory" class="deleteall browse-record">选题记录</a>
+                                <input type="button" class="generate" value="进入组卷中心">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar" id="navBar">
+            
+            <div class="wrapper clearfix">
+           
+                <div class="navbar-left fl">
+                    <div class="navbar-left-hd">
+                        <span class="now-subject">高中数学</span>
+                        <i class="ico-menu"></i>
+                    </div>
+                    <div class="submenu">
+                        <div class="senior">
+                            <ul>
+                                <h2>高中</h2>
+                                <li data="10">语文</li>
+                                <li data="11">数学</li>
+                                <li data="12">英语</li>
+                                <li data="13">物理</li>
+                                <li data="14">化学</li>
+                                <li data="15">生物</li>
+                                <li data="16">政治</li>
+                                <li data="17">历史</li>
+                                <li data="18">地理</li>
+                                <li data="27">信息技术</li>
+                                <li data="28">通用技术</li>
+                            </ul>
+                        </div>
+                        <div class="line"></div>
+                        <div class="junior">
+                            <ul>
+                                <h2>初中</h2>
+                                <li data="1">语文</li>
+                                <li data="2">数学</li>
+                                <li data="3">英语</li>
+                                <li data="4">物理</li>
+                                <li data="5">化学</li>
+                                <li data="6">生物</li>
+                                <li data="9">地理</li>
+                                <li data="7">道德与法治</li>
+                                <li data="8">历史</li>
+                                <li data="30">历史与社会</li>
+                                <li data="26">科学</li>
+                                <li data="29">信息技术</li>
+                            </ul>
+                        </div>
+                        <div class="line"></div>
+                        <div class="primary">
+                            <ul>
+                                <h2>小学</h2>
+                                <li data="24">语文</li>
+                                <li data="23">数学</li>
+                                <li data="25">英语</li>
+                                <li data="32">科学</li>
+                                <li data="31">道德与法治</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-menu fl">
+                    <!--* 春节皮肤 -->
+                    <div class="lantern"></div>
+                    <!-- 春节皮肤 *-->
+                    <li id="index"><a href="http://zujuan.xkw.com/">首页</a></li>
+                    <li id="zsd">
+                        <a href="/zhishidian/">知识点选题</a>
+                    </li>
+                    <li id="zj">
+                        <a href="/zhangjie/">章节选题</a>
+                    </li>
+                    <li id="shijuan">
+                        <a href="/shijuan/">试卷选题</a>
+                    </li>
+                    <li id="zhineng">
+                        <a href="/zhineng/">智能选题</a>
+                    </li>
+                    <li id="top_ximubiao">
+                        <a id="btn_ximubiao" href="/basic/">细目表组卷</a>
+                    </li>
+                    <li id="hundredNavSchool">
+                        <a id="hundredNav" href="javascript:void(0)">名校卷</a>
+                    </li>
+                    <li id="gaokao">
+                        <a href="/gkzq/">高考专区</a>
+                        
+                    </li>
+                    
+                    <li id="zhuanti">
+                        <a href="/thematiclist/">特色专题</a>
+                    </li>
+                    <li id="homeworkland" style="display: none;">
+                        <a href="/Web/homework/landing.aspx" target="_blank">作业中心</a>
+                        <span class="nav_new" style="top: 0;"></span>
+                    </li>
+                    <li id="myPaper">
+                        <a href="/wode/" rel="nofollow">我的组卷</a>
+                        
+                    </li>
+                </ul>
+                <div class="fr" id="shoppingCartHolder"></div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        dropdowncontent.init("qixia_a", "right-bottom", 500);
+        dropdowncontent.init("qixia_b", "right-bottom", 500);
+    </script>
+
+    
+    <div id="ctl00_cache"><script type="text/javascript">var d="2019/7/4 11:29:58";var edu=[{"ID":1,"Name":"小学","QuesBankList":[{"ID":24,"Name":"小学语文","Subject":"语文","EduID":1,"EduName":"小学","QuesTypeList":[{"ID":101,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":102,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":103,"Name":"语言表达","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":104,"Name":"现代文阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":105,"Name":"文言文阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":106,"Name":"信息匹配","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":107,"Name":"书面表达","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":108,"Name":"句型转换","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":109,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":110,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":111,"Name":"排序题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":112,"Name":"书写","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":113,"Name":"古诗阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":114,"Name":"修改病句","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":115,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":116,"Name":"其他","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":100987,"Name":"小学语文综合库"},{"ID":108070,"Name":"人教部编版（2016）"},{"ID":108222,"Name":"人教版（2001）"},{"ID":110848,"Name":"苏教版（2016）"},{"ID":110269,"Name":"苏教版（2001）"},{"ID":108857,"Name":"北师大版（2016）"},{"ID":109002,"Name":"北师大版（2001）"},{"ID":111518,"Name":"语文S版（2016）"},{"ID":110977,"Name":"语文S版（2003）"},{"ID":110148,"Name":"西师大版（2016）"},{"ID":109637,"Name":"西师大版（2003）"},{"ID":114913,"Name":"北京版（2016）"},{"ID":115047,"Name":"北京版（2004）"},{"ID":118360,"Name":"教科版（五四学制）（2016）"},{"ID":117695,"Name":"教科版（五四学制）（2003）"},{"ID":114319,"Name":"冀教版（2002）"},{"ID":115654,"Name":"鲁教版（五四学制）"},{"ID":112281,"Name":"沪教版（2015）"},{"ID":113048,"Name":"沪教版（2007）"},{"ID":119226,"Name":"长春版（2016）"},{"ID":119335,"Name":"长春版（2003）"},{"ID":118478,"Name":"鄂教版（2016）"},{"ID":118607,"Name":"鄂教版（2003）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":1,"Name":"一年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":2,"Name":"二年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":3,"Name":"三年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":4,"Name":"四年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":5,"Name":"五年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":6,"Name":"六年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]}],"QuesAttributeList":[]},{"ID":23,"Name":"小学数学","Subject":"数学","EduID":1,"EduName":"小学","QuesTypeList":[{"ID":201,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":202,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":203,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":204,"Name":"计算题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":205,"Name":"解答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":206,"Name":"排序题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":207,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":208,"Name":"作图题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":209,"Name":"改错题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":100875,"Name":"小学数学综合库"},{"ID":101436,"Name":"人教版（2012）"},{"ID":104295,"Name":"苏教版（2012）"},{"ID":102162,"Name":"北师大版（2012）"},{"ID":103574,"Name":"西师大版（2012）"},{"ID":105340,"Name":"青岛版（2012）"},{"ID":106240,"Name":"北京版（2013）"},{"ID":104776,"Name":"冀教版（2012）"},{"ID":105549,"Name":"青岛版（五四学制）（2012）"},{"ID":105828,"Name":"浙教版"},{"ID":106770,"Name":"沪教版（2015）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":1,"Name":"一年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":2,"Name":"二年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":3,"Name":"三年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":4,"Name":"四年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":5,"Name":"五年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":6,"Name":"六年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":25,"Name":"小学英语","Subject":"英语","EduID":1,"EduName":"小学","QuesTypeList":[{"ID":301,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":302,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":303,"Name":"单词拼写","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":304,"Name":"排序题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":305,"Name":"阅读理解","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":30501,"Name":"阅读选择","IsSelectType":true,"OrderIndex":0,"ParentId":305},{"ID":30502,"Name":"阅读回答问题","IsSelectType":false,"OrderIndex":0,"ParentId":305},{"ID":30503,"Name":"任务型阅读","IsSelectType":false,"OrderIndex":0,"ParentId":305},{"ID":306,"Name":"翻译","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":30601,"Name":"英译汉","IsSelectType":false,"OrderIndex":0,"ParentId":306},{"ID":30602,"Name":"汉译英","IsSelectType":false,"OrderIndex":0,"ParentId":306},{"ID":30603,"Name":"英汉混合","IsSelectType":false,"OrderIndex":0,"ParentId":306},{"ID":307,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":308,"Name":"句型转换","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":309,"Name":"完形填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":310,"Name":"情景交际","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":311,"Name":"补全对话","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":31101,"Name":"填内容补全对话","IsSelectType":false,"OrderIndex":0,"ParentId":311},{"ID":31102,"Name":"选内容补全对话","IsSelectType":false,"OrderIndex":0,"ParentId":311},{"ID":312,"Name":"改错","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":313,"Name":"匹配题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":314,"Name":"看图题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":315,"Name":"听力题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":316,"Name":"字母题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":317,"Name":"音标题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":318,"Name":"抄写题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":319,"Name":"画图题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":320,"Name":"看图仿写","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":32001,"Name":"仿写句子","IsSelectType":false,"OrderIndex":0,"ParentId":320},{"ID":32002,"Name":"仿写对话","IsSelectType":false,"OrderIndex":0,"ParentId":320},{"ID":323,"Name":"连词成句","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":324,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":325,"Name":"书面表达","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":326,"Name":"其他","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":101088,"Name":"小学英语综合库"},{"ID":119843,"Name":"人教PEP版（2012）"},{"ID":119986,"Name":"人教精通版（2012）"},{"ID":122334,"Name":"外研版（三起）（2012）"},{"ID":121435,"Name":"译林版（三起）（2012）"},{"ID":123583,"Name":"牛津上海版（三起）（2012）"},{"ID":122616,"Name":"北师大版（三起）"},{"ID":123334,"Name":"冀教版（三起）"},{"ID":126380,"Name":"陕旅版（三起）"},{"ID":124969,"Name":"北京版"},{"ID":123720,"Name":"沪教版"},{"ID":124477,"Name":"教科版（EEC）"},{"ID":125384,"Name":"闽教版"},{"ID":125661,"Name":"湘鲁版"},{"ID":124175,"Name":"湘少版（三起）（2012）"},{"ID":125766,"Name":"重大版（2012）"},{"ID":120517,"Name":"人教新起点版（2012）"},{"ID":121524,"Name":"外研版（一起）（2012）"},{"ID":121382,"Name":"译林版（一起）（2015）"},{"ID":122901,"Name":"北师大版（一起）"},{"ID":122985,"Name":"冀教版（一起）"},{"ID":123936,"Name":"牛津上海版（试用本）"},{"ID":121249,"Name":"牛津译林版（2006）"},{"ID":124550,"Name":"教科版（广州）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":1,"Name":"一年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":2,"Name":"二年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":3,"Name":"三年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":4,"Name":"四年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":5,"Name":"五年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":6,"Name":"六年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]}],"QuesAttributeList":[]},{"ID":31,"Name":"小学道德与法治","Subject":"政治","EduID":1,"EduName":"小学","QuesTypeList":[{"ID":401,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":402,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":403,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":404,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":408,"Name":"排序题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":405,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":406,"Name":"辨析题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":407,"Name":"综合题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":136871,"Name":"小学道德与法治综合库"},{"ID":137134,"Name":"人教部编版（2016）"},{"ID":137290,"Name":"人教版（2002）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":1,"Name":"一年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":2,"Name":"二年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":3,"Name":"三年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":4,"Name":"四年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":5,"Name":"五年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":6,"Name":"六年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]}],"QuesAttributeList":[]},{"ID":32,"Name":"小学科学","Subject":"科学","EduID":1,"EduName":"小学","QuesTypeList":[{"ID":501,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":502,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":503,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":504,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":508,"Name":"排序题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":505,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":506,"Name":"实验题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":507,"Name":"综合题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":141821,"Name":"小学科学综合库"},{"ID":142883,"Name":"教科版"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":1,"Name":"一年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":2,"Name":"二年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":3,"Name":"三年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":4,"Name":"四年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":5,"Name":"五年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]},{"ID":6,"Name":"六年级","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"},{"ID":11,"Name":"小升初模拟"},{"ID":14,"Name":"小升初真题"}]}],"QuesAttributeList":[]}]},{"ID":2,"Name":"初中","QuesBankList":[{"ID":1,"Name":"初中语文","Subject":"语文","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1001,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":1002,"Name":"字词书写","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1003,"Name":"现代文阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1004,"Name":"文言文阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1005,"Name":"名句名篇默写","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":100501,"Name":"句子默写","IsSelectType":false,"OrderIndex":0,"ParentId":1005},{"ID":100502,"Name":"情景默写","IsSelectType":false,"OrderIndex":0,"ParentId":1005},{"ID":1006,"Name":"诗歌鉴赏","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1007,"Name":"语言表达","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1008,"Name":"名著阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1009,"Name":"综合性学习","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1010,"Name":"作文","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":101001,"Name":"命题作文","IsSelectType":false,"OrderIndex":0,"ParentId":1010},{"ID":101002,"Name":"话题作文","IsSelectType":false,"OrderIndex":0,"ParentId":1010},{"ID":101003,"Name":"材料作文","IsSelectType":false,"OrderIndex":0,"ParentId":1010},{"ID":101004,"Name":"小作文","IsSelectType":false,"OrderIndex":0,"ParentId":1010},{"ID":1011,"Name":"其他","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":1,"Name":"初中语文综合库"},{"ID":53263,"Name":"人教部编版（2016）"},{"ID":129912,"Name":"人教部编版（五四学制）（2018）"},{"ID":49921,"Name":"北师大版（2016）"},{"ID":50859,"Name":"河大版（2016）"},{"ID":50343,"Name":"鄂教版（2016）"},{"ID":52213,"Name":"京改版（2016）"},{"ID":54079,"Name":"苏教版（2016）"},{"ID":55062,"Name":"长春版（2016）"},{"ID":54703,"Name":"语文版（2016）"},{"ID":52813,"Name":"人教版（2006）"},{"ID":49495,"Name":"北师大版（2004）"},{"ID":50050,"Name":"鄂教版（2004）"},{"ID":54840,"Name":"长春版（2004）"},{"ID":53685,"Name":"苏教版（2002）"},{"ID":54238,"Name":"语文版（2002）"},{"ID":52394,"Name":"鲁教版（五四学制）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":11,"Name":"识记"},{"ID":12,"Name":"基础应用"},{"ID":13,"Name":"理解"},{"ID":14,"Name":"鉴赏评价"},{"ID":15,"Name":"分析综合"},{"ID":16,"Name":"探究"},{"ID":17,"Name":"表达应用"}]},{"ID":2,"Name":"初中数学","Subject":"数学","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":1102,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1103,"Name":"解答题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":4677,"Name":"初中数学综合库"},{"ID":58506,"Name":"人教版（2012）"},{"ID":55145,"Name":"京改版"},{"ID":55474,"Name":"北师大版（2012）"},{"ID":55894,"Name":"沪教版（上海）"},{"ID":56395,"Name":"沪科版（2012）"},{"ID":56561,"Name":"华东师大版（2012）"},{"ID":57081,"Name":"冀教版（2012）"},{"ID":57771,"Name":"鲁教版（五四制）（2012）"},{"ID":58019,"Name":"青岛版（2012）"},{"ID":58836,"Name":"人教版（五四制）"},{"ID":59032,"Name":"苏科版（2012）"},{"ID":59394,"Name":"湘教版（2012）"},{"ID":59792,"Name":"浙教版（2012）"}],"CategorySynchronizeList":[{"ID":145830,"Name":"初中数学方法维度库"}],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":3,"Name":"初中英语","Subject":"英语","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1201,"Name":"听力填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":120101,"Name":"听句子或对话填写表格","IsSelectType":false,"OrderIndex":0,"ParentId":1201},{"ID":120102,"Name":"听录音写单词或短语","IsSelectType":false,"OrderIndex":0,"ParentId":1201},{"ID":120103,"Name":"听录音补全句子","IsSelectType":false,"OrderIndex":0,"ParentId":1201},{"ID":120104,"Name":"听短文填写表格","IsSelectType":false,"OrderIndex":0,"ParentId":1201},{"ID":1202,"Name":"听力排序","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":120201,"Name":"听对话给句子排序","IsSelectType":false,"OrderIndex":0,"ParentId":1202},{"ID":120202,"Name":"听对话给图片排序","IsSelectType":false,"OrderIndex":0,"ParentId":1202},{"ID":120203,"Name":"听短文给句子排序","IsSelectType":false,"OrderIndex":0,"ParentId":1202},{"ID":120204,"Name":"听短文给图片排序","IsSelectType":false,"OrderIndex":0,"ParentId":1202},{"ID":1203,"Name":"听力选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":120301,"Name":"听句子或对话选择图片","IsSelectType":false,"OrderIndex":0,"ParentId":1203},{"ID":120302,"Name":"听句子选答语","IsSelectType":false,"OrderIndex":0,"ParentId":1203},{"ID":120303,"Name":"听短对话回答问题","IsSelectType":false,"OrderIndex":0,"ParentId":1203},{"ID":120304,"Name":"听录音选择听到的句子","IsSelectType":false,"OrderIndex":0,"ParentId":1203},{"ID":120305,"Name":"听短文回答问题","IsSelectType":false,"OrderIndex":0,"ParentId":1203},{"ID":120306,"Name":"听音辩词","IsSelectType":false,"OrderIndex":0,"ParentId":1203},{"ID":120307,"Name":"听长对话回答问题","IsSelectType":false,"OrderIndex":0,"ParentId":1203},{"ID":1204,"Name":"听音判断","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":120401,"Name":"听句子或对话判断","IsSelectType":false,"OrderIndex":0,"ParentId":1204},{"ID":120402,"Name":"听短文判断","IsSelectType":false,"OrderIndex":0,"ParentId":1204},{"ID":1205,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":1206,"Name":"句型转换","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1207,"Name":"单词拼写","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":120701,"Name":"填写适当的单词补全句子","IsSelectType":false,"OrderIndex":0,"ParentId":1207},{"ID":120702,"Name":"根据首字母、中文提示填空","IsSelectType":false,"OrderIndex":0,"ParentId":1207},{"ID":120703,"Name":"看图识词","IsSelectType":false,"OrderIndex":0,"ParentId":1207},{"ID":120704,"Name":"根据音标写单词","IsSelectType":false,"OrderIndex":0,"ParentId":1207},{"ID":1208,"Name":"用所给单词的正确形式填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1209,"Name":"完成句子","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1210,"Name":"选词填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":121001,"Name":"用单词的正确形式完成句子","IsSelectType":false,"OrderIndex":0,"ParentId":1210},{"ID":121002,"Name":"用单词的正确形式完成短文","IsSelectType":false,"OrderIndex":0,"ParentId":1210},{"ID":1211,"Name":"补全对话","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":121101,"Name":"填写适当的句子补全对话","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121102,"Name":"选用适当的单词补全对话","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121103,"Name":"填写适当的单词补全对话","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121104,"Name":"句子配对","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121105,"Name":"补全对话5选4","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121106,"Name":"补全对话5选5","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121107,"Name":"补全对话6选5","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121108,"Name":"补全对话7选5","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121109,"Name":"补全对话单选","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":121110,"Name":"补全对话4选4","IsSelectType":false,"OrderIndex":0,"ParentId":1211},{"ID":1212,"Name":"选择句子补全短文","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":121201,"Name":"补全短文5选4","IsSelectType":false,"OrderIndex":0,"ParentId":1212},{"ID":121202,"Name":"补全短文5选5","IsSelectType":false,"OrderIndex":0,"ParentId":1212},{"ID":121203,"Name":"补全短文6选5","IsSelectType":false,"OrderIndex":0,"ParentId":1212},{"ID":121204,"Name":"补全短文7选5","IsSelectType":false,"OrderIndex":0,"ParentId":1212},{"ID":121205,"Name":"补全短文4选4","IsSelectType":false,"OrderIndex":0,"ParentId":1212},{"ID":1213,"Name":"短文填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":121301,"Name":"单词填空","IsSelectType":false,"OrderIndex":0,"ParentId":1213},{"ID":121302,"Name":"语法填空","IsSelectType":false,"OrderIndex":0,"ParentId":1213},{"ID":121303,"Name":"图文填空","IsSelectType":false,"OrderIndex":0,"ParentId":1213},{"ID":1214,"Name":"完型填空","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":1215,"Name":"阅读理解","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":121501,"Name":"阅读单选","IsSelectType":true,"OrderIndex":0,"ParentId":1215},{"ID":121502,"Name":"阅读判断","IsSelectType":false,"OrderIndex":0,"ParentId":1215},{"ID":1216,"Name":"任务型阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":121601,"Name":"填空","IsSelectType":false,"OrderIndex":0,"ParentId":1216},{"ID":121602,"Name":"信息匹配","IsSelectType":false,"OrderIndex":0,"ParentId":1216},{"ID":121603,"Name":"信息归纳","IsSelectType":false,"OrderIndex":0,"ParentId":1216},{"ID":121604,"Name":"回答问题","IsSelectType":false,"OrderIndex":0,"ParentId":1216},{"ID":121605,"Name":"多任务混合问题","IsSelectType":false,"OrderIndex":0,"ParentId":1216},{"ID":121606,"Name":"阅读排序","IsSelectType":false,"OrderIndex":0,"ParentId":1216},{"ID":1217,"Name":"改错","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":121701,"Name":"句子/对话改错","IsSelectType":false,"OrderIndex":0,"ParentId":1217},{"ID":121702,"Name":"短文改错","IsSelectType":false,"OrderIndex":0,"ParentId":1217},{"ID":1218,"Name":"句子排序组成对话或短文","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1219,"Name":"连词成句","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":121901,"Name":"将所给单词连成句子","IsSelectType":false,"OrderIndex":0,"ParentId":1219},{"ID":121902,"Name":"根据图画及所给单词写出句子","IsSelectType":false,"OrderIndex":0,"ParentId":1219},{"ID":1220,"Name":"翻译题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":122001,"Name":"汉译英：单词/短语","IsSelectType":false,"OrderIndex":0,"ParentId":1220},{"ID":122002,"Name":"汉译英：整句","IsSelectType":false,"OrderIndex":0,"ParentId":1220},{"ID":122003,"Name":"英译汉：单词/短语","IsSelectType":false,"OrderIndex":0,"ParentId":1220},{"ID":122004,"Name":"英译汉：整句","IsSelectType":false,"OrderIndex":0,"ParentId":1220},{"ID":122005,"Name":"英汉互译：单词/短语","IsSelectType":false,"OrderIndex":0,"ParentId":1220},{"ID":122006,"Name":"英汉互译：整句","IsSelectType":false,"OrderIndex":0,"ParentId":1220},{"ID":1221,"Name":"书面表达","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":122101,"Name":"看图作文","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122102,"Name":"材料作文","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122103,"Name":"话题作文","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122104,"Name":"书信作文","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122105,"Name":"看图写短语或句子","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122106,"Name":"日记","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122107,"Name":"讲稿","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122108,"Name":"便条","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122109,"Name":"启事类","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":122110,"Name":"通知","IsSelectType":false,"OrderIndex":0,"ParentId":1221},{"ID":1222,"Name":"其他","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":6043,"Name":"初中英语综合库"},{"ID":61673,"Name":"人教新目标Go For It!（2012）"},{"ID":60309,"Name":"鲁教版（五四学制）（2012）"},{"ID":60477,"Name":"牛津上海版（2008）"},{"ID":60997,"Name":"冀教版（2012）"},{"ID":61413,"Name":"牛津深圳版（广州沈阳通用）"},{"ID":61541,"Name":"牛津译林版（2012）"},{"ID":61772,"Name":"仁爱版（2012）"},{"ID":61894,"Name":"外研版（2012）"},{"ID":62445,"Name":"北京课改版（北京出版社）（2007）"},{"ID":62523,"Name":"教科版（五四学制）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[]},{"ID":4,"Name":"初中物理","Subject":"物理","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1301,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":130101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":1301},{"ID":130104,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":1301},{"ID":1302,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1303,"Name":"实验题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1304,"Name":"计算题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1305,"Name":"作图题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1306,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1307,"Name":"综合题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":18194,"Name":"初中物理综合库"},{"ID":63559,"Name":"人教版"},{"ID":62773,"Name":"北师大版"},{"ID":62895,"Name":"北师大版（北京）（京改版）"},{"ID":63012,"Name":"沪科版"},{"ID":63136,"Name":"沪粤版"},{"ID":63270,"Name":"教科版"},{"ID":63415,"Name":"鲁教版（五四学制）"},{"ID":63695,"Name":"苏科版"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":5,"Name":"初中化学","Subject":"化学","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1401,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":140101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":1401},{"ID":140102,"Name":"多选题","IsSelectType":false,"OrderIndex":0,"ParentId":1401},{"ID":1402,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1403,"Name":"实验题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1404,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1405,"Name":"选择填充题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1406,"Name":"推断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1407,"Name":"流程题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1408,"Name":"科学探究题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1409,"Name":"计算题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1410,"Name":"综合题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":140103,"Name":"选择题组","IsSelectType":false,"OrderIndex":0,"ParentId":1401},{"ID":1411,"Name":"科普阅读题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":19366,"Name":"初中化学综合库"},{"ID":64423,"Name":"人教版"},{"ID":63902,"Name":"沪教版（上海）"},{"ID":63941,"Name":"沪教版（全国）"},{"ID":63999,"Name":"京改版（2013）"},{"ID":64134,"Name":"科粤版（2012）"},{"ID":64267,"Name":"鲁教版"},{"ID":64337,"Name":"鲁教版（五四学制）"},{"ID":64495,"Name":"人教版（五四学制）"},{"ID":64567,"Name":"仁爱版"}],"CategorySynchronizeList":[{"ID":145874,"Name":"初中化学方法维度库"}],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":6,"Name":"初中生物","Subject":"生物","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1501,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":150101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":1501},{"ID":150102,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":1501},{"ID":1502,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1503,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1504,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1505,"Name":"综合题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":19922,"Name":"初中生物综合库"},{"ID":65416,"Name":"人教版"},{"ID":64627,"Name":"北师大版"},{"ID":64769,"Name":"冀少版"},{"ID":65004,"Name":"济南版"},{"ID":65150,"Name":"京改版"},{"ID":65246,"Name":"鲁科版（五四学制）"},{"ID":65567,"Name":"苏教版"},{"ID":65717,"Name":"苏科版"},{"ID":65852,"Name":"人教版（五四制）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":7,"Name":"初中道德与法治","Subject":"道德与法治","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1601,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":160101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":1601},{"ID":160102,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":1601},{"ID":1602,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1603,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1604,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1605,"Name":"辨析题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1606,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1607,"Name":"情境探究题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1608,"Name":"分析说明题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1609,"Name":"综合探究题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":20335,"Name":"初中政治综合库"},{"ID":67560,"Name":"人教部编版（2016）"},{"ID":129913,"Name":"人教部编版（五四学制）（2018）"},{"ID":66003,"Name":"北师大版（2016）"},{"ID":68053,"Name":"人民版（2016）"},{"ID":68415,"Name":"首师大版（2016）"},{"ID":68349,"Name":"陕教版（2016）"},{"ID":66377,"Name":"教科版（2016）"},{"ID":69182,"Name":"湘师大版（2016）"},{"ID":68681,"Name":"苏人版（2016）"},{"ID":69311,"Name":"粤教版（2016）"},{"ID":67053,"Name":"鲁人版（2016）"},{"ID":67292,"Name":"鲁人版（五四学制）（2016）"},{"ID":67351,"Name":"人教版（2004）"},{"ID":66092,"Name":"北师大版（2004）"},{"ID":67791,"Name":"人民版（2004）"},{"ID":68170,"Name":"陕教版（2004）"},{"ID":66541,"Name":"教科版（2004）"},{"ID":69046,"Name":"湘师大版（2004）"},{"ID":68796,"Name":"苏人版（2004）"},{"ID":69468,"Name":"粤教版（2004）"},{"ID":66857,"Name":"鲁人版（2003）"},{"ID":67188,"Name":"鲁人版（五四学制）（2003）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":8,"Name":"初中历史","Subject":"历史","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1701,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":1702,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1703,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1704,"Name":"列举题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1705,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1706,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1707,"Name":"综合题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":21351,"Name":"初中历史综合库"},{"ID":71117,"Name":"人教部编版（2016）"},{"ID":130956,"Name":"人教部编版（五四学制）（2018）"},{"ID":69788,"Name":"北师大版（2016）"},{"ID":70807,"Name":"冀人版（2016）"},{"ID":70380,"Name":"华东师大版（2016）"},{"ID":71056,"Name":"京改版（2016）"},{"ID":70087,"Name":"川教版（2016）"},{"ID":71619,"Name":"岳麓版（2016）"},{"ID":71911,"Name":"中华书局版（2016）"},{"ID":72184,"Name":"中图版（2016）"},{"ID":71179,"Name":"人教版（2001）"},{"ID":70868,"Name":"京改版（2005）"},{"ID":69853,"Name":"川教版（2003）"},{"ID":70442,"Name":"华东师大版（上海）"},{"ID":70604,"Name":"冀人版（2003）"},{"ID":71395,"Name":"岳麓版（2003）"},{"ID":71690,"Name":"中华书局版（2003）"},{"ID":71966,"Name":"中图版（2003）"},{"ID":69580,"Name":"北师大版（2001）"},{"ID":70151,"Name":"华东师大版（2001）"},{"ID":72244,"Name":"鲁教版（五四学制）"},{"ID":72472,"Name":"人教版（五四学制）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":9,"Name":"初中地理","Subject":"地理","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1801,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":1802,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1803,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1804,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1805,"Name":"解答题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":22298,"Name":"初中地理综合库"},{"ID":73614,"Name":"人教版"},{"ID":72688,"Name":"沪教版（上海）"},{"ID":72813,"Name":"晋教版"},{"ID":72907,"Name":"鲁教版（五四学制）"},{"ID":73022,"Name":"仁爱版"},{"ID":73123,"Name":"商务星球版"},{"ID":73233,"Name":"湘教版"},{"ID":73337,"Name":"粤人版"},{"ID":73441,"Name":"中图版"},{"ID":73529,"Name":"中图版（北京）"},{"ID":73713,"Name":"人教版（五四学制）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":26,"Name":"初中科学","Subject":"科学","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":1901,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":1902,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1903,"Name":"计算题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1904,"Name":"探究题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1905,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":1906,"Name":"连线题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":48236,"Name":"初中科学综合库"},{"ID":92334,"Name":"武汉版"},{"ID":92597,"Name":"华东师大版（2012）"},{"ID":93120,"Name":"牛津上海版（五四学制）"},{"ID":93414,"Name":"浙教版（2013）"},{"ID":93699,"Name":"沪教版（上海）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":29,"Name":"初中信息技术","Subject":"信息技术","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":2001,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":2002,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2003,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2004,"Name":"操作题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2005,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":49453,"Name":"初中信息技术综合库"},{"ID":97614,"Name":"人教版"},{"ID":97004,"Name":"川教版"},{"ID":97106,"Name":"华东师大版"},{"ID":97158,"Name":"冀教版"},{"ID":97214,"Name":"龙教版"},{"ID":97403,"Name":"闽教版（2016）"},{"ID":97466,"Name":"青岛版（2010）"},{"ID":98042,"Name":"苏教版"},{"ID":98105,"Name":"泰山版"},{"ID":98236,"Name":"粤教版"},{"ID":98360,"Name":"浙教版（2013）"},{"ID":98493,"Name":"北师大版"},{"ID":98589,"Name":"苏科版"},{"ID":98808,"Name":"人教版（三、四年制）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":30,"Name":"初中历史与社会","Subject":"历史与社会","EduID":2,"EduName":"初中","QuesTypeList":[{"ID":2101,"Name":"单项选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":2102,"Name":"非选择题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":129204,"Name":"初中历史与社会综合库"},{"ID":129449,"Name":"人教版（2012）"},{"ID":129620,"Name":"人教版（2001）"},{"ID":129724,"Name":"沪教版"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":7,"Name":"初一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":8,"Name":"初二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":7,"Name":"竞赛"}]},{"ID":9,"Name":"初三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":10,"Name":"中考模拟"},{"ID":13,"Name":"中考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[]}]},{"ID":3,"Name":"高中","QuesBankList":[{"ID":10,"Name":"高中语文","Subject":"语文","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":2601,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":2602,"Name":"现代文阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2603,"Name":"文言文阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2604,"Name":"名句名篇默写","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":260401,"Name":"句子默写","IsSelectType":false,"OrderIndex":0,"ParentId":2604},{"ID":260402,"Name":"情景默写","IsSelectType":false,"OrderIndex":0,"ParentId":2604},{"ID":2605,"Name":"诗歌鉴赏","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2606,"Name":"语言表达","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2607,"Name":"名著阅读","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2608,"Name":"作文","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":260801,"Name":"命题作文","IsSelectType":false,"OrderIndex":0,"ParentId":2608},{"ID":260802,"Name":"话题作文","IsSelectType":false,"OrderIndex":0,"ParentId":2608},{"ID":260803,"Name":"材料作文","IsSelectType":false,"OrderIndex":0,"ParentId":2608},{"ID":260804,"Name":"小作文","IsSelectType":false,"OrderIndex":0,"ParentId":2608},{"ID":2609,"Name":"其他","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":23177,"Name":"高中语文综合库"},{"ID":75638,"Name":"人教版"},{"ID":74837,"Name":"鲁人版"},{"ID":76444,"Name":"苏教版"},{"ID":77407,"Name":"语文版"},{"ID":78164,"Name":"粤教版"},{"ID":73812,"Name":"北师大版"},{"ID":74258,"Name":"华东师大版"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":11,"Name":"识记"},{"ID":12,"Name":"基础应用"},{"ID":13,"Name":"理解"},{"ID":14,"Name":"鉴赏评价"},{"ID":15,"Name":"分析综合"},{"ID":16,"Name":"探究"},{"ID":17,"Name":"表达应用"}]},{"ID":11,"Name":"高中数学","Subject":"数学","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":2701,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":2702,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2703,"Name":"解答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2704,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":27925,"Name":"高中数学综合库"},{"ID":79903,"Name":"人教A版"},{"ID":80512,"Name":"人教B版"},{"ID":79243,"Name":"北师大版"},{"ID":81004,"Name":"苏教版"},{"ID":81720,"Name":"湘教版"},{"ID":79775,"Name":"沪教版（上海）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":12,"Name":"高中英语","Subject":"英语","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":2801,"Name":"听力选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":280101,"Name":"短对话","IsSelectType":true,"OrderIndex":0,"ParentId":2801},{"ID":280102,"Name":"长对话","IsSelectType":true,"OrderIndex":0,"ParentId":2801},{"ID":2802,"Name":"听力填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2803,"Name":"单项选择","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":2804,"Name":"单词拼写","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2805,"Name":"完成句子","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":280501,"Name":"用所给词的正确形式填空","IsSelectType":false,"OrderIndex":0,"ParentId":2805},{"ID":280502,"Name":"选用适当的单词或短语补全句子","IsSelectType":false,"OrderIndex":0,"ParentId":2805},{"ID":280503,"Name":"根据所给汉语意思完成句子","IsSelectType":false,"OrderIndex":0,"ParentId":2805},{"ID":280504,"Name":"用适当的词完成句子","IsSelectType":false,"OrderIndex":0,"ParentId":2805},{"ID":280505,"Name":"句型转换","IsSelectType":false,"OrderIndex":0,"ParentId":2805},{"ID":2806,"Name":"改错","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":280601,"Name":"单句改错","IsSelectType":false,"OrderIndex":0,"ParentId":2806},{"ID":280602,"Name":"短文改错","IsSelectType":false,"OrderIndex":0,"ParentId":2806},{"ID":2807,"Name":"翻译","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":280701,"Name":"汉译英","IsSelectType":false,"OrderIndex":0,"ParentId":2807},{"ID":280702,"Name":"英译汉","IsSelectType":false,"OrderIndex":0,"ParentId":2807},{"ID":280703,"Name":"英汉互译","IsSelectType":false,"OrderIndex":0,"ParentId":2807},{"ID":2808,"Name":"完形填空","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":2809,"Name":"阅读理解","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":2810,"Name":"其他阅读题型","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":281001,"Name":"任务型阅读","IsSelectType":false,"OrderIndex":0,"ParentId":2810},{"ID":281002,"Name":"阅读表达","IsSelectType":false,"OrderIndex":0,"ParentId":2810},{"ID":281003,"Name":"七选五","IsSelectType":true,"OrderIndex":0,"ParentId":2810},{"ID":281004,"Name":"信息匹配","IsSelectType":false,"OrderIndex":0,"ParentId":2810},{"ID":2811,"Name":"对话填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2812,"Name":"短文填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":281201,"Name":"根据首字母或汉语或语境提示补全短文","IsSelectType":false,"OrderIndex":0,"ParentId":2812},{"ID":281202,"Name":"选用适当的单词或短语补全短文","IsSelectType":false,"OrderIndex":0,"ParentId":2812},{"ID":281203,"Name":"根据课文内容填空","IsSelectType":false,"OrderIndex":0,"ParentId":2812},{"ID":2813,"Name":"语法填空","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2814,"Name":"书面表达","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":281401,"Name":"提纲类作文","IsSelectType":false,"OrderIndex":0,"ParentId":2814},{"ID":281402,"Name":"图表作文","IsSelectType":false,"OrderIndex":0,"ParentId":2814},{"ID":281403,"Name":"图画作文","IsSelectType":false,"OrderIndex":0,"ParentId":2814},{"ID":281404,"Name":"开放性作文","IsSelectType":false,"OrderIndex":0,"ParentId":2814},{"ID":281405,"Name":"读写任务","IsSelectType":false,"OrderIndex":0,"ParentId":2814},{"ID":2815,"Name":"其他","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":281406,"Name":"读后续写","IsSelectType":false,"OrderIndex":0,"ParentId":2814},{"ID":280103,"Name":"短文","IsSelectType":false,"OrderIndex":0,"ParentId":2801},{"ID":281005,"Name":"六选四","IsSelectType":false,"OrderIndex":0,"ParentId":2810},{"ID":281407,"Name":"概要写作","IsSelectType":false,"OrderIndex":0,"ParentId":2814}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":29978,"Name":"高中英语综合库"},{"ID":82608,"Name":"人教新课标"},{"ID":83073,"Name":"牛津译林版"},{"ID":82984,"Name":"外研版"},{"ID":82350,"Name":"北师大版"},{"ID":82686,"Name":"上海新世纪版"},{"ID":82787,"Name":"冀教版"},{"ID":82897,"Name":"牛津上海版"},{"ID":83447,"Name":"重庆大学版"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[]},{"ID":13,"Name":"高中物理","Subject":"物理","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":2901,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":290101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":2901},{"ID":290104,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":2901},{"ID":2902,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2903,"Name":"实验题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2904,"Name":"解答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":2905,"Name":"作图题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":41934,"Name":"高中物理综合库"},{"ID":84557,"Name":"人教版"},{"ID":83584,"Name":"沪科版"},{"ID":83683,"Name":"教科版"},{"ID":84062,"Name":"鲁科版"},{"ID":84960,"Name":"沪教版"},{"ID":85366,"Name":"粤教版"},{"ID":86204,"Name":"华东师大版（上海）"}],"CategorySynchronizeList":[{"ID":145954,"Name":"高中物理方法维度库"}],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":14,"Name":"高中化学","Subject":"化学","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":3001,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":300101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":3001},{"ID":300102,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":3001},{"ID":3002,"Name":"综合题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3003,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3004,"Name":"实验题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3005,"Name":"计算题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3006,"Name":"推断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3007,"Name":"解答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3008,"Name":"工业流程","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":43452,"Name":"高中化学综合库"},{"ID":86522,"Name":"人教版"},{"ID":86337,"Name":"鲁科版"},{"ID":86701,"Name":"苏教版"},{"ID":86888,"Name":"沪科版"}],"CategorySynchronizeList":[{"ID":146020,"Name":"高中化学方法维度库"}],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":15,"Name":"高中生物","Subject":"生物","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":3101,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":310101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":3101},{"ID":310103,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":3101},{"ID":3102,"Name":"非选择题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":44886,"Name":"高中生物综合库"},{"ID":87468,"Name":"人教版"},{"ID":87120,"Name":"北师大版"},{"ID":87381,"Name":"沪科版"},{"ID":87669,"Name":"苏教版"},{"ID":87960,"Name":"浙科版"},{"ID":88133,"Name":"中图版"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":16,"Name":"高中政治","Subject":"政治","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":3201,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":320101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":3201},{"ID":320102,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":3201},{"ID":3203,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3207,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":321301,"Name":"辨析题","IsSelectType":false,"OrderIndex":0,"ParentId":3213},{"ID":321302,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":3213},{"ID":321303,"Name":"图表题","IsSelectType":false,"OrderIndex":0,"ParentId":3213},{"ID":321304,"Name":"材料分析题","IsSelectType":false,"OrderIndex":0,"ParentId":3213},{"ID":321305,"Name":"论述题","IsSelectType":false,"OrderIndex":0,"ParentId":3213},{"ID":321306,"Name":"开放性试题","IsSelectType":false,"OrderIndex":0,"ParentId":3213},{"ID":3213,"Name":"主观题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":45411,"Name":"高中政治综合库"},{"ID":88516,"Name":"人教版"},{"ID":88360,"Name":"沪教版（上海）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":17,"Name":"高中历史","Subject":"历史","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":3301,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":330101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":3301},{"ID":330102,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":3301},{"ID":3303,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3304,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3305,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3306,"Name":"材料分析题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3307,"Name":"论述题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":46428,"Name":"高中历史综合库"},{"ID":89781,"Name":"人教版"},{"ID":88940,"Name":"北师大版"},{"ID":90173,"Name":"人民版"},{"ID":90550,"Name":"岳麓版（2007）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":18,"Name":"高中地理","Subject":"地理","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":3401,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":340101,"Name":"单选题","IsSelectType":true,"OrderIndex":0,"ParentId":3401},{"ID":340102,"Name":"多选题","IsSelectType":true,"OrderIndex":0,"ParentId":3401},{"ID":3402,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3403,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3404,"Name":"综合题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":340104,"Name":"选择题组（多选）","IsSelectType":false,"OrderIndex":0,"ParentId":3401}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":47135,"Name":"高中地理综合库"},{"ID":91256,"Name":"人教版"},{"ID":91000,"Name":"鲁教版"},{"ID":91522,"Name":"湘教版"},{"ID":91783,"Name":"中图版"},{"ID":91998,"Name":"中图版（上海）"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":27,"Name":"高中信息技术","Subject":"信息技术","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":3501,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":3502,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3503,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3504,"Name":"操作题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3505,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":49210,"Name":"高中信息技术综合库"},{"ID":94118,"Name":"人教版"},{"ID":93783,"Name":"沪科版"},{"ID":94551,"Name":"教科版"},{"ID":94983,"Name":"粤教版"},{"ID":95537,"Name":"浙教版"},{"ID":95736,"Name":"中图版"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]},{"ID":28,"Name":"高中通用技术","Subject":"通用技术","EduID":3,"EduName":"高中","QuesTypeList":[{"ID":3901,"Name":"选择题","IsSelectType":true,"OrderIndex":0,"ParentId":0},{"ID":3902,"Name":"填空题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3903,"Name":"判断题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3904,"Name":"简答题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3905,"Name":"作图题","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3906,"Name":"分析评价","IsSelectType":false,"OrderIndex":0,"ParentId":0},{"ID":3907,"Name":"选择题组","IsSelectType":false,"OrderIndex":0,"ParentId":0}],"QuesAbilityList":[{"ID":1,"Name":"了解和识记"}],"CategoryList":[{"ID":49292,"Name":"高中通用技术综合库"},{"ID":95941,"Name":"苏教版"},{"ID":96187,"Name":"粤科版"},{"ID":96448,"Name":"豫科版"},{"ID":96802,"Name":"地质版"}],"CategorySynchronizeList":[],"LearnGradeList":[{"ID":10,"Name":"高一","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":11,"Name":"高二","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]},{"ID":12,"Name":"高三","PaperTypeList":[{"ID":1,"Name":"课时练习"},{"ID":2,"Name":"单元测试"},{"ID":6,"Name":"专题练习"},{"ID":3,"Name":"月考"},{"ID":8,"Name":"开学考试"},{"ID":4,"Name":"期中"},{"ID":5,"Name":"期末"},{"ID":9,"Name":"高考模拟"},{"ID":12,"Name":"高考真题"},{"ID":15,"Name":"会考"},{"ID":7,"Name":"竞赛"}]}],"QuesAttributeList":[{"ID":1,"Name":"知识点同步题"},{"ID":2,"Name":"章内综合题"},{"ID":3,"Name":"跨章节综合题"},{"ID":4,"Name":"知识迁移题"}]}]}];var diffs=[{"ID":1,"DifValue":0.0,"Name":"容易"},{"ID":2,"DifValue":0.0,"Name":"较易"},{"ID":3,"DifValue":0.0,"Name":"一般"},{"ID":4,"DifValue":0.0,"Name":"较难"},{"ID":5,"DifValue":0.0,"Name":"困难"}];var usergroup={"GroupID":1,"GroupName":"普通用户","GroupCode":"NU001","GroupNote":"普通用户","IsBasicGroup":true,"IsPointPaidMode":true,"CanAutoSelQues":true,"CanSearchQues":true,"CancollectQues":false,"CanViewQuesAnswer":true,"CanViewQuesParse":false,"CanDownQuesParse":false,"AllowUploadQuesFile":false,"MaxQuesNumInPaper":35,"MaxCreatePaperOneDay":3,"MaxCreatePaperOneDay_danzhanghao":0,"CanVisitPaperGradeList":"41","MaxFavQues":20,"MaxFavPaper":5,"MaxAutoPaper":0,"MaxDownParse":0,"MaxViewParse":30,"TrailMaxCreatePaperOneDay":0};var province=[{"ID":1,"Name":"全国","ShortName":"全国"},{"ID":110000,"Name":"北京","ShortName":"北京"},{"ID":120000,"Name":"天津","ShortName":"天津"},{"ID":130000,"Name":"河北","ShortName":"河北"},{"ID":140000,"Name":"山西","ShortName":"山西"},{"ID":150000,"Name":"内蒙古","ShortName":"内蒙古"},{"ID":210000,"Name":"辽宁","ShortName":"辽宁"},{"ID":220000,"Name":"吉林","ShortName":"吉林"},{"ID":230000,"Name":"黑龙江","ShortName":"黑龙江"},{"ID":310000,"Name":"上海","ShortName":"上海"},{"ID":320000,"Name":"江苏","ShortName":"江苏"},{"ID":330000,"Name":"浙江","ShortName":"浙江"},{"ID":340000,"Name":"安徽","ShortName":"安徽"},{"ID":350000,"Name":"福建","ShortName":"福建"},{"ID":360000,"Name":"江西","ShortName":"江西"},{"ID":370000,"Name":"山东","ShortName":"山东"},{"ID":410000,"Name":"河南","ShortName":"河南"},{"ID":420000,"Name":"湖北","ShortName":"湖北"},{"ID":430000,"Name":"湖南","ShortName":"湖南"},{"ID":440000,"Name":"广东","ShortName":"广东"},{"ID":450000,"Name":"广西","ShortName":"广西"},{"ID":460000,"Name":"海南","ShortName":"海南"},{"ID":500000,"Name":"重庆","ShortName":"重庆"},{"ID":510000,"Name":"四川","ShortName":"四川"},{"ID":520000,"Name":"贵州","ShortName":"贵州"},{"ID":530000,"Name":"云南","ShortName":"云南"},{"ID":540000,"Name":"西藏","ShortName":"西藏"},{"ID":610000,"Name":"陕西","ShortName":"陕西"},{"ID":620000,"Name":"甘肃","ShortName":"甘肃"},{"ID":630000,"Name":"青海","ShortName":"青海"},{"ID":640000,"Name":"宁夏","ShortName":"宁夏"},{"ID":650000,"Name":"新疆","ShortName":"新疆"},{"ID":710000,"Name":"台湾","ShortName":"台湾"},{"ID":810000,"Name":"香港","ShortName":"香港"},{"ID":820000,"Name":"澳门","ShortName":"澳门"}];var answerimg="http://im.zujuan.xkw.com/Answer";var jiexiimg="http://im.zujuan.xkw.com/Parse";var isvisitor=true;var questypeorder="[{\"questypeid\":\"2701\",\"questypename\":\"单选题\",\"part\":\"0\"},{\"questypeid\":\"2704\",\"questypename\":\"多选题\",\"part\":\"0\"},{\"questypeid\":\"2702\",\"questypename\":\"填空题\",\"part\":\"1\"},{\"questypeid\":\"2703\",\"questypename\":\"解答题\",\"part\":\"1\"}]";var ishzx="0"</script></div>
+    <script type="text/javascript" src="/resource/js/web.default.js?t=20190628"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            //进入组卷中心
+            $(".generate").click(function () {
+                //cnzz事件跟踪
+                _czc.push(["_trackEvent", "试题篮", "进入"]);
+                enterToZujuanCenter();
+            });
+
+            $("#icon_zujuan").click(function () {
+                //cnzz事件跟踪
+                _czc.push(["_trackEvent", "试题篮", "进入"]);
+                enterToZujuanCenter();
+            });
+            $("#icon_tozujuan").click(function () {
+
+                //cnzz事件跟踪
+                _czc.push(["_trackEvent", "试题篮", "进入"]);
+                enterToZujuanCenter();
+            });
+            $("#top_gaokaozujuan").click(function () {
+                gkzjurl();
+            });
+        });
+    </script>
+    
+    <div class="container">
+        
+
+        <div class="wrapper clearfix">
+            
+            
+    
+    
+    
+
+    <div class="container">
+        <!-- //高斯模糊背景布局 -->
+        <div class="fade-bg-wrap">
+            <!-- //用于chrome和firefoxd滤镜高斯模糊效果 -->
+            <div class="fade-bg"></div>
+
+            <!-- //用于IE10和IE11制作滤镜高斯模糊效果 -->
+            <svg class="svg-img" width="100%" height="280" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <filter id="blurMe">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="500" />
+                </filter>
+                <image filter="url(#blurMe)" x="100" y="10" width="1920px" height="280px" xlink:href="" alt=""></image>
+            </svg>
+            <!-- //渐变背景，用来模糊滤镜和页面背景过于清晰的边界 -->
+            <div class="top-mask"></div>
+        </div>
+        <div class="wrapper clearfix hierarchy">
+            <!--txl 首次进入组卷网提示 start-->
+            <div class="choice-tips clearfix" style="display: none">
+                <div class="choice-tips-left">
+                    <i class="close-tips">&times</i>
+                    <p>首次进入网站请选择要查找的学科哦！一次只能选择一门学科~</p>
+                </div>
+                <div class="choice-tips-right"></div>
+            </div>
+            <!--txl 首次进入组卷网提示 end-->
+            <div class="submenu fl">
+                <div class="senior">
+                    <ul>
+                        <h2>高中</h2>
+                        <li data="10">语文</li>
+                        <li data="11">数学</li>
+                        <li data="12">英语</li>
+                        <li data="13">物理</li>
+                        <li data="14">化学</li>
+                        <li data="15">生物</li>
+                        <li data="16">政治</li>
+                        <li data="17">历史</li>
+                        <li data="18">地理</li>
+                        <li data="27">信息技术</li>
+                        <li data="28">通用技术</li>
+                    </ul>
+                </div>
+                <div class="line"></div>
+                <div class="junior">
+                    <ul>
+                        <h2>初中</h2>
+                        <li data="1">语文</li>
+                        <li data="2">数学</li>
+                        <li data="3">英语</li>
+                        <li data="4">物理</li>
+                        <li data="5">化学</li>
+                        <li data="6">生物</li>
+                        <li data="9">地理</li>
+                        <li data="7">道德与法治</li>
+                        <li data="8">历史</li>
+                        <li data="30">历史与社会</li>
+                        <li data="26">科学</li>
+                        <li data="29">信息技术</li>
+                    </ul>
+                </div>
+                <div class="line"></div>
+                <div class="primary">
+                    <ul>
+                        <h2>小学</h2>
+                        <li data="24">语文</li>
+                        <li data="23">数学</li>
+                        <li data="25">英语</li>
+                        <li data="32">科学</li>
+                        <li data="31">道德与法治</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner-area fr">
+                <div class="clearfix banner-area-bgcolor">
+                    <div class="slides fl">
+                        <div class="banner">
+                            <ul class="banner-slide" id="focus-banner-list"></ul>
+                        </div>
+                        
+                    </div>
+                    <div class="banner-aside fr">
+                        <div class="news clearfix">
+                            <svg class="symbol news-notice fl" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-gonggao"></use>
+                            </svg>
+                            <!--公告列表-->
+                            <ul id="ctl00_ContentPlaceHolder1_newAnnounce" class="news-scroll fl"><li><a href="http://kf.zujuan.xkw.com/announcedetail/219" target="_blank">阅读“新视野”∣组卷网拓展阅读功能上线啦</a></li><li><a href="http://kf.zujuan.xkw.com/announcedetail/218" target="_blank">【喜讯】组卷网新增 知识点解读功能</a></li><li><a href="http://kf.zujuan.xkw.com/announcedetail/217" target="_blank">【福利贴】移动教学助手功能上线了</a></li><li><a href="http://kf.zujuan.xkw.com/announcedetail/216" target="_blank">组卷网小学科学、道德与法治上线了！</a></li><li><a href="http://kf.zujuan.xkw.com/announcedetail/215" target="_blank">【喜讯】组卷网新增 知识点解读功能</a></li></ul>
+                            <a href="http://kf.zujuan.xkw.com/announce" target="_blank" class="news-more fr">更多</a>
+                        </div>
+                        <!--试题总数-->
+                        <div class="amount">
+                            <ul class="amount-item clearfix">
+                                <li>
+                                    <span id="num1" class="color-blue bold"></span>万道试题
+                                </li>
+                                <li>
+                                    <span id="num2" class="color-blue bold"></span>万套试卷
+                                </li>
+                                <li>近7天更新<span id="num3" class="color-blue bold"> </span>道
+                                </li>
+                                <li>昨日更新<span id="num4" class="color-blue bold"> </span>道
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="special">
+                            <div class="special-title">今日精选</div>
+                            <ul id="ctl00_ContentPlaceHolder1_special_ui" class="special-item">    <li><span>高一丨</span><a href="/thematiclist/11m11429.html"   target="_blank" title="必修4简单的三角恒等变换（2）">必修4简单的三角恒等变换（2）</a></li>    <li><span>高二丨</span><a href="/thematiclist/11m11483.html"   target="_blank" title="理数选修4-5-周末培优">理数选修4-5-周末培优</a></li>    <li><span>高三丨</span><a href="/thematiclist/11m11601.html"   target="_blank" title="（文数）四轮复习——押高考数学第23题">（文数）四轮复习——押高考数学第23题</a></li></ul>
+                            <div class="special-title clearfix">
+                                <span class="fl">今日推荐</span>
+                                <div class="grade-selection fr">
+                                    <a href="javascript:;" id="gradeDiv_txt">高一</a><i class="icon icon-arrow"></i>
+                                    <div class="grade-selection-down" id="gradeDiv_ui">
+                                        <a href="javascript:;" data-grade="1">高一</a>
+                                        <a href="javascript:;" data-grade="2">高二</a>
+                                        <a href="javascript:;" data-grade="3">高三</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="special-item" id="recom_ui">
+                                <li><span>高一丨</span><a href="javascript:;">人教必修1-牛顿第牛顿第二定律实验二定律实验</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ctl00_ContentPlaceHolder1_shortcutCanvas" class="shortcut clearfix"><a href="/yuejuan"  target="_blank" >    <svg class="symbol" aria-hidden="true">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-xitong-lan"></use>    </svg>    <span>阅卷系统</span>   <p>组卷阅卷一站式服务</p></a><a href="/Web/homework/landing.aspx"  target="_blank" >    <svg class="symbol" aria-hidden="true">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-zhushou-lan"></use>    </svg>    <span>移动教学助手</span>   <p>作业功能/成绩统计/家校互动</p></a><a href="/gkzt/gzsx/zhenti/"  target="_blank" >    <svg class="symbol" aria-hidden="true">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-zhonggao-lan"></use>    </svg>    <span>高考真题</span>   <p>历年真题/应有尽有</p></a><a href="/gzsx/shijuan/a410000/"  target="_blank" >    <svg class="symbol" aria-hidden="true">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-bendi-lan"></use>    </svg>    <span>本地推荐</span>   <p>地区匹配/精准教学</p></a><a href="/shoucang/"  target="_blank" >    <svg class="symbol" aria-hidden="true">        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-tiku-lan"></use>    </svg>    <span>试题收藏</span>   <p>我的专属题集</p></a></div>
+            </div>
+        </div>
+
+        <a style="background-image: url(http://img.zujuan.xkw.com/zujuanimg/20190220.jpg); margin: 20px auto 0; width: 1200px; height: 90px; display: block;" href="http://bs.pt.zxxk.com/PartTimeTeacher/Job?jobid=6" target="_blank"></a>
+        <div class="wrapper">
+            <div class="exam-item clearfix">
+                <div class="exam-item-list fl">
+                    <div class="exam-item-hd">
+                        <div class="exam-item-title fl">
+                            <svg class="symbol" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new"></use>
+                            </svg>
+                            <span>最新试卷</span>
+                        </div>
+                        <div class="exam-hd-more fr">
+                            <a href="/shijuan/" target="_blank">更多</a>
+                        </div>
+                    </div>
+                    <ul class="exam-col" id="newpaperlist1">
+                        <li><span class="color-blue">【联考】</span><a title='江西省南昌市八一中学、洪都中学、麻丘高中等七校2018-2019学年高二下学期期末考试数学（文）试题' paperid = "536987" href="/11p536987.html" target="_blank">江西省南昌市八一中学、洪都中学、麻丘高中等七校2018-2019学年高二下学期期末考试数学（文）试题</a><em class="date">07-04</em></li><li><span class="color-blue">【校考】</span><a title='上海市川沙中学2018-2019学年高一第二学期期末数学试题' paperid = "536975" href="/11p536975.html" target="_blank">上海市川沙中学2018-2019学年高一第二学期期末数学试题</a><em class="date">07-04</em></li><li><span class="color-blue">【联考】</span><a title='天津市部分区2019届高三联考一模数学（文）试题' paperid = "536968" href="/11p536968.html" target="_blank">天津市部分区2019届高三联考一模数学（文）试题</a><em class="date">07-04</em></li><li><span class="color-blue">【校考】</span><a title='江苏省扬州市扬州中学2018—2019学年度高一第二学期期末检测数学试题' paperid = "536947" href="/11p536947.html" target="_blank">江苏省扬州市扬州中学2018—2019学年度高一第二学期期末检测数学试题</a><em class="date">07-04</em></li><li><span class="color-blue">【普通】</span><a title='吉林省蛟河市一中2018-2019学年高一下学期第三次测试数学试题' paperid = "536845" href="/11p536845.html" target="_blank">吉林省蛟河市一中2018-2019学年高一下学期第三次测试数学试题</a><em class="date">07-03</em></li><li><span class="color-blue">【校考】</span><a title='湖南省怀化三中2019届高三第三次模拟考试高三数学（文科）试题' paperid = "536675" href="/11p536675.html" target="_blank">湖南省怀化三中2019届高三第三次模拟考试高三数学（文科）试题</a><em class="date">07-03</em></li>
+                    </ul>
+                </div>
+                <div class="exam-item-list fr">
+                    <div class="exam-item-hd">
+                        <div class="exam-item-title fl">
+                            <svg class="symbol" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-hot"></use>
+                            </svg>
+                            <span>最热试卷</span>
+                        </div>
+                        <div class="exam-hd-more fr">
+                            <a href="javascript:void(0)" id="bestHotPaperList">更多</a>
+                        </div>
+                    </div>
+                    <ul class="exam-col" id="newpaperlist2">
+                        <li><span class="color-blue">【统考】</span><a title='陕西省韩城市2018-2019学年高二下学期期末教学检测数学理科试题' paperid = "536665" href="/11p536665.html" target="_blank">陕西省韩城市2018-2019学年高二下学期期末教学检测数学理科试题</a><em class="date">07-03</em></li><li><span class="color-blue">【普通】</span><a title='天津市河北区2019届高三一模数学（文）试题' paperid = "536660" href="/11p536660.html" target="_blank">天津市河北区2019届高三一模数学（文）试题</a><em class="date">07-03</em></li><li><span class="color-blue">【普通】</span><a title='天津市河北区2019届高三一模数学（理）试题' paperid = "536659" href="/11p536659.html" target="_blank">天津市河北区2019届高三一模数学（理）试题</a><em class="date">07-03</em></li><li><span class="color-blue">【精品】</span><a title='福建省莆田市莆田第八中学2018-2019学年高二下学期第二次月考数学（文）试题' paperid = "536656" href="/11p536656.html" target="_blank">福建省莆田市莆田第八中学2018-2019学年高二下学期第二次月考数学（文）试题</a><em class="date">07-03</em></li><li><span class="color-blue">【联考】</span><a title='江苏省盐城市2018~2019学年高二第二学期期末考试数学（文理合卷）试题' paperid = "536518" href="/11p536518.html" target="_blank">江苏省盐城市2018~2019学年高二第二学期期末考试数学（文理合卷）试题</a><em class="date">07-03</em></li><li><span class="color-blue">【联考】</span><a title='山东省安丘市、诸城市、五莲县、兰山区2019届高三5月校际联合考试数学（文）试题' paperid = "536391" href="/11p536391.html" target="_blank">山东省安丘市、诸城市、五莲县、兰山区2019届高三5月校际联合考试数学（文）试题</a><em class="date">07-03</em></li>
+                    </ul>
+                </div>
+            </div>
+            <a style="background-image: url(http://img.zujuan.xkw.com/zujuanimg/%E5%B9%BF%E5%91%8A%E5%9B%BE%EF%BC%88%E7%BB%84%E5%8D%B7%EF%BC%892.jpg); margin: 20px auto 0; width: 1200px; height: 90px; display: block;" href="http://kf.zujuan.xkw.com/announcedetail/194" target="_blank"></a>
+
+            <div class="exam-item clearfix" id="divIsPrimary">
+                <div class="exam-item-list fl">
+                    <div class="exam-item-hd">
+                        <div class="exam-item-title fl">
+                            <svg class="symbol" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-school"></use>
+                            </svg>
+                            <span>名校试卷</span>
+                        </div>
+                        <div class="exam-hd-more fr">
+                            <a href="/topschoolpaperlist/" target="_blank">更多</a>
+                        </div>
+                    </div>
+                    <ul class="exam-col" id="lightpaper">
+                        <li><span class="color-blue">【百强校】</span><a title='河南省南阳市第一中学2018-2019学年高二下学期第四次月考数学（文）试题（解析版）' paperid = "535933" href="/11p535933.html" target="_blank">河南省南阳市第一中学2018-2019学年高二下学期第四次月考数学（文）试题（解析版）</a><em class="date">07-02</em></li><li><span class="color-blue">【百强校】</span><a title='广西南宁市第三中学2018-2019学年高一下学期期中考试数学试题' paperid = "534527" href="/11p534527.html" target="_blank">广西南宁市第三中学2018-2019学年高一下学期期中考试数学试题</a><em class="date">06-28</em></li><li><span class="color-blue">【百强校】</span><a title='天津市耀华中学2017-2018学年高二上学期期末考试数学（文）试题' paperid = "534498" href="/11p534498.html" target="_blank">天津市耀华中学2017-2018学年高二上学期期末考试数学（文）试题</a><em class="date">06-28</em></li><li><span class="color-blue">【百强校】</span><a title='宁夏回族自治区平罗中学2018-2019学年高二下学期期中考试数学（文）试题' paperid = "534205" href="/11p534205.html" target="_blank">宁夏回族自治区平罗中学2018-2019学年高二下学期期中考试数学（文）试题</a><em class="date">06-27</em></li><li><span class="color-blue">【百强校】</span><a title='天津市第一中学2017-2018学年高一上学期期末考试数学试题' paperid = "534062" href="/11p534062.html" target="_blank">天津市第一中学2017-2018学年高一上学期期末考试数学试题</a><em class="date">06-27</em></li><li><span class="color-blue">【百强校】</span><a title='内蒙古开来中学2018-2019学年高二5月期中考试数学（理）试题' paperid = "534053" href="/11p534053.html" target="_blank">内蒙古开来中学2018-2019学年高二5月期中考试数学（理）试题</a><em class="date">06-27</em></li>
+                    </ul>
+                </div>
+                <div class="exam-item-list fr">
+                    <div class="exam-item-hd">
+                        <div class="exam-item-title fl">
+                            <svg class="symbol" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-original"></use>
+                            </svg>
+                            
+                            <span id="zgkTitleCanvas"></span>
+                        </div>
+                        <div class="exam-hd-more fr">
+                            <a href="javascript:void(0)" id="level_choice_more">更多</a>
+                        </div>
+                    </div>
+                    <ul class="exam-col" id="gkdiv">
+                        <li><span class="color-blue">【普通】</span><a title='2019年江苏省高考数学试卷' paperid = "525166" href="/11p525166.html" target="_blank">2019年江苏省高考数学试卷</a><em class="date">06-10</em></li><li><span class="color-blue">【普通】</span><a title='2019年北京市高考数学试卷（理科）' paperid = "525064" href="/11p525064.html" target="_blank">2019年北京市高考数学试卷（理科）</a><em class="date">06-10</em></li><li><span class="color-blue">【普通】</span><a title='2019年北京市高考数学试卷（文科）' paperid = "525063" href="/11p525063.html" target="_blank">2019年北京市高考数学试卷（文科）</a><em class="date">06-10</em></li><li><span class="color-blue">【普通】</span><a title='2019年浙江省高考数学试卷' paperid = "524664" href="/11p524664.html" target="_blank">2019年浙江省高考数学试卷</a><em class="date">06-09</em></li><li><span class="color-blue">【普通】</span><a title='2019年全国统一高考数学试卷（理科）（新课标Ⅲ）' paperid = "524650" href="/11p524650.html" target="_blank">2019年全国统一高考数学试卷（理科）（新课标Ⅲ）</a><em class="date">06-09</em></li><li><span class="color-blue">【普通】</span><a title='2019年全国统一高考数学试卷（文科）（新课标Ⅲ）' paperid = "524649" href="/11p524649.html" target="_blank">2019年全国统一高考数学试卷（文科）（新课标Ⅲ）</a><em class="date">06-09</em></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exam-item clearfix">
+                <div class="exam-item-hd">
+                    <div class="exam-item-title fl">
+                        <svg class="symbol" aria-hidden="true">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cooperation"></use>
+                        </svg>
+                        <span>合作名校</span>
+                    </div>
+                    <div class="exam-hd-more fr">
+                        <a href="/topschool/" target="_blank">更多</a>
+                    </div>
+                </div>
+                <div class="school clearfix">
+                    <div class="service fl">
+                        <div class="hd">E卷通专属服务</div>
+                        <p>免费使用700万试题、45万试卷资源</p>
+                        <p>免费使用上百所全国名校、百强校试题</p>
+                        <p>免费使用上百套精品原创专辑</p>
+                        <p>免费使用两千多所全国省重点学校试题</p>
+                        <p>每日下载试题试卷数量无限制</p>
+                        <a href="http://kf.zujuan.xkw.com/customer" target="_blank" class="btn">联系我们</a>
+                    </div>
+                    <!--合作校列表-->
+                    <ul id="ctl00_ContentPlaceHolder1_topschool_div" class="school-list-pic clearfix fl"><li><a target="_blank" href="/topschooldetail/62491/"><img src="http://mingxiao.zxxk.com/UserFace/BigImg/62491.png" alt="四川省双流县棠湖中学+试卷精选" /><p>棠湖中学</p></a></li><li><a target="_blank" href="/topschooldetail/32812/"><img src="http://mingxiao.zxxk.com/UserFace/BigImg/32812.jpg" alt="南昌市第二中学(市四中、二十二中被合并)+试卷精选" /><p>南昌二中</p></a></li><li><a target="_blank" href="/topschooldetail/5187/"><img src="http://mingxiao.zxxk.com/UserFace/BigImg/5187.jpg" alt="河北定州中学（原定州市第一中学）+试卷精选" /><p>定州一中</p></a></li><li><a target="_blank" href="/topschooldetail/71389/"><img src="http://mingxiao.zxxk.com/UserFace/BigImg/71389.jpg" alt="甘肃省兰州第一中学+试卷精选" /><p>兰州一中</p></a></li><li><a target="_blank" href="/topschooldetail/61152/"><img src="http://mingxiao.zxxk.com/UserFace/BigImg/61152.png" alt="重庆市第一中学+试卷精选" /><p>重庆一中</p></a></li><li><a target="_blank" href="/topschooldetail/17426/"><img src="http://mingxiao.zxxk.com/UserFace/BigImg/17426.png" alt="大庆实验中学+试卷精选" /><p>大庆实验中学</p></a></li><li><a target="_blank" href="/topschooldetail/76118/"><img src="http://mingxiao.zxxk.com/UserFace/BigImg/76118.jpg" alt="宁夏回族自治区银川一中（又：宁夏回民高级中学）+试卷精选" /><p>银川一中</p></a></li><li><a target="_blank" href="/topschooldetail/18032/"><img src="http://mingxiao.zxxk.com/UserFace/BigImg/18032.png" alt="牡丹江市第一高级中学+试卷精选" /><p>牡丹江一中</p></a></li></ul>
+                </div>
+            </div>
+
+            <div class="feature bgwhite">
+                <ul class="clearfix">
+                    <li>
+                        <a class="feature-item" href="http://kf.zujuan.xkw.com/product" target="_blank">
+                            <svg class="symbol" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-advantage"></use>
+                            </svg>
+                            <p>组卷优势</p>
+                            <div class="info">
+                                <span>试卷多</span>
+                                <span>更新快</span>
+                                <span>质量高</span>
+                                <span>组卷易</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="feature-item" href="/zhangjie/" target="_blank`">
+                            <svg class="symbol" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-test"></use>
+                            </svg>
+                            <p>同步测试</p>
+                            <div class="info">
+                                <span>版本全面</span>
+                                <span>难度适中</span>
+                                <span>学情测评</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="feature-item" href="http://kf.zujuan.xkw.com/helper" target="_blank">
+                            <svg class="symbol" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-introduce"></use>
+                            </svg>
+                            <p>帮助介绍</p>
+                            <div class="info">
+                                <span>视频介绍</span>
+                                <span>新手帮助</span>
+                                <span>手册下载</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="ctl00_ContentPlaceHolder1_FriendshipLink_div" class="link"><div class="wrapper"><div class="link-hd"><span>友情链接</span></div><div class="link-bd" ><a target="_blank" href="http://www.zxxk.com">学科网</a><a target="_blank" href="http://www.zxxk.com/gaokao/">高考真题</a><a target="_blank" href="http://zhongkao.zxxk.com/">中考网</a><a target="_blank" href="http://www.xuekeedu.com/">小学英语</a><a target="_blank" href="http://gaokao.zxxk.com/">高考网</a><a target="_blank" href="http://ldjx.xueyiyun.com/">罗定技校</a><a target="_blank" href="http://www.jiaoping.com/">教育app</a><a target="_blank" href="http://sw.zxxk.com/">高中生物教案</a><a target="_blank" href="http://dl.zxxk.com/">高中地理教案</a><a target="_blank" href="http://zz.zxxk.com/">高中政治教案</a><a target="_blank" href="http://ls.zxxk.com/">高中历史教案</a><a target="_blank" href="http://hx.zxxk.com/">高中化学教案</a><a target="_blank" href="http://wl.zxxk.com/">高中物理教案</a><a target="_blank" href="http://yy.zxxk.com/">高中英语教案</a><a target="_blank" href="http://sx.zxxk.com/">高中数学教案</a><a target="_blank" href="http://yw.zxxk.com/">高中语文教案</a><a target="_blank" href="http://china.findlaw.cn/ask/">法律咨询</a><a target="_blank" href="https://www.vipjr.com/">少儿英语学习</a><a target="_blank" href="http://www.zgsydw.com/gansu/ ">甘肃事业单位招聘网</a><a target="_blank" href="https://www.yixuela.com/">高中学习网</a><a target="_blank" href="http://www.zgsydw.com/hubei/">湖北事业单位招聘网</a><a target="_blank" href="http://www.okaoyan.com/">考研时间</a><a target="_blank" href="http://gs.offcn.com/">甘肃公务员考试网</a><a target="_blank" href="http://zujuan.xkw.com/gzsx/">高中数学题库</a></div></div></div>
+        </div>
+    </div>
+
+    <p id="back-to-top " style="display: block;">
+        <a href="#top "><span></span></a>
+    </p>
+    <input name="ctl00$ContentPlaceHolder1$inpshowid" type="hidden" id="inpshowid" value="0" />
+    <input name="ctl00$ContentPlaceHolder1$InpBanner" type="hidden" id="InpBanner" value="[{&quot;ID&quot;:9331,&quot;BLID&quot;:29,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9799,&quot;BLID&quot;:73,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17037,&quot;BLID&quot;:32,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:91,&quot;BLID&quot;:1,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:116,&quot;BLID&quot;:2,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:141,&quot;BLID&quot;:3,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:1271,&quot;BLID&quot;:10,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:1297,&quot;BLID&quot;:11,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:1116,&quot;BLID&quot;:12,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl10pt68y2018g12/&quot;},{&quot;ID&quot;:1091,&quot;BLID&quot;:13,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:11983,&quot;BLID&quot;:20,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:11931,&quot;BLID&quot;:15,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9773,&quot;BLID&quot;:76,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl118y2019g10/&quot;},{&quot;ID&quot;:11957,&quot;BLID&quot;:21,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:10605,&quot;BLID&quot;:90,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1074g12.html&quot;},{&quot;ID&quot;:891,&quot;BLID&quot;:14,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl13pt100y2018g12/&quot;},{&quot;ID&quot;:3403,&quot;BLID&quot;:5,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:1765,&quot;BLID&quot;:6,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:13705,&quot;BLID&quot;:43,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:3975,&quot;BLID&quot;:44,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9877,&quot;BLID&quot;:69,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:13537,&quot;BLID&quot;:72,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p938g12.html&quot;},{&quot;ID&quot;:2545,&quot;BLID&quot;:25,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:2571,&quot;BLID&quot;:26,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:3533,&quot;BLID&quot;:7,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://kf.zujuan.xkw.com/announcedetail/199&quot;},{&quot;ID&quot;:2597,&quot;BLID&quot;:27,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:4755,&quot;BLID&quot;:4,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:13789,&quot;BLID&quot;:112,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14405,&quot;BLID&quot;:110,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14433,&quot;BLID&quot;:111,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14713,&quot;BLID&quot;:84,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14657,&quot;BLID&quot;:77,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14573,&quot;BLID&quot;:68,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:8811,&quot;BLID&quot;:39,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl104pt565y2019g12/&quot;},{&quot;ID&quot;:3689,&quot;BLID&quot;:31,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:2649,&quot;BLID&quot;:24,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9357,&quot;BLID&quot;:30,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:8057,&quot;BLID&quot;:19,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:8083,&quot;BLID&quot;:18,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:4079,&quot;BLID&quot;:33,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:8109,&quot;BLID&quot;:23,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl13pt319y2018g12/&quot;},{&quot;ID&quot;:15777,&quot;BLID&quot;:121,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1083g12.html&quot;},{&quot;ID&quot;:8187,&quot;BLID&quot;:34,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl104pt540y2019g12/&quot;},{&quot;ID&quot;:13677,&quot;BLID&quot;:49,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14685,&quot;BLID&quot;:83,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1074g12.html&quot;},{&quot;ID&quot;:16337,&quot;BLID&quot;:103,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:13509,&quot;BLID&quot;:74,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p968g12.html&quot;},{&quot;ID&quot;:16981,&quot;BLID&quot;:35,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17065,&quot;BLID&quot;:28,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16813,&quot;BLID&quot;:82,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16533,&quot;BLID&quot;:119,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9955,&quot;BLID&quot;:55,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9981,&quot;BLID&quot;:56,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:10007,&quot;BLID&quot;:57,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14013,&quot;BLID&quot;:104,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16281,&quot;BLID&quot;:115,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gkzt/gzsx/zhenti/y2019t2/&quot;},{&quot;ID&quot;:17345,&quot;BLID&quot;:128,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17373,&quot;BLID&quot;:129,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17401,&quot;BLID&quot;:130,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17429,&quot;BLID&quot;:131,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17121,&quot;BLID&quot;:140,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9123,&quot;BLID&quot;:42,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16617,&quot;BLID&quot;:109,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16925,&quot;BLID&quot;:40,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16505,&quot;BLID&quot;:8,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://bs.pt.zxxk.com/PartTimeTeacher/Job?jobid=6&quot;},{&quot;ID&quot;:17149,&quot;BLID&quot;:141,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16225,&quot;BLID&quot;:142,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1104g12.html&quot;},{&quot;ID&quot;:13033,&quot;BLID&quot;:64,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:8837,&quot;BLID&quot;:38,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl104pt567y2019g12/&quot;},{&quot;ID&quot;:16785,&quot;BLID&quot;:86,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:6939,&quot;BLID&quot;:16,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:6965,&quot;BLID&quot;:22,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl13pt406y2018g12/&quot;},{&quot;ID&quot;:6991,&quot;BLID&quot;:50,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:12451,&quot;BLID&quot;:52,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p757g10.html&quot;},{&quot;ID&quot;:16757,&quot;BLID&quot;:85,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:7797,&quot;BLID&quot;:48,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl84pt685y2018g11/&quot;},{&quot;ID&quot;:13005,&quot;BLID&quot;:95,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9825,&quot;BLID&quot;:70,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:6835,&quot;BLID&quot;:62,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17205,&quot;BLID&quot;:123,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9851,&quot;BLID&quot;:53,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16841,&quot;BLID&quot;:65,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16869,&quot;BLID&quot;:51,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17233,&quot;BLID&quot;:124,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17261,&quot;BLID&quot;:125,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17289,&quot;BLID&quot;:126,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17317,&quot;BLID&quot;:127,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:12191,&quot;BLID&quot;:99,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:11723,&quot;BLID&quot;:92,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16393,&quot;BLID&quot;:93,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14601,&quot;BLID&quot;:71,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:12165,&quot;BLID&quot;:100,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:8291,&quot;BLID&quot;:17,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:12217,&quot;BLID&quot;:101,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:9513,&quot;BLID&quot;:54,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16729,&quot;BLID&quot;:102,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:12399,&quot;BLID&quot;:87,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:13565,&quot;BLID&quot;:46,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14629,&quot;BLID&quot;:105,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/&quot;},{&quot;ID&quot;:16253,&quot;BLID&quot;:120,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1083g12.html&quot;},{&quot;ID&quot;:16701,&quot;BLID&quot;:106,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16561,&quot;BLID&quot;:114,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:13061,&quot;BLID&quot;:94,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:10995,&quot;BLID&quot;:89,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p791g12.html&quot;},{&quot;ID&quot;:16589,&quot;BLID&quot;:113,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:10189,&quot;BLID&quot;:60,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl108pt788y2019g12/&quot;},{&quot;ID&quot;:16645,&quot;BLID&quot;:108,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:10579,&quot;BLID&quot;:81,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gzsx/thematiclist/zhuanti/ptl118y2019g10/&quot;},{&quot;ID&quot;:16673,&quot;BLID&quot;:107,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:10735,&quot;BLID&quot;:91,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:10969,&quot;BLID&quot;:88,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1074g12.html&quot;},{&quot;ID&quot;:12269,&quot;BLID&quot;:63,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1090g12.html&quot;},{&quot;ID&quot;:12295,&quot;BLID&quot;:98,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1090g12.html&quot;},{&quot;ID&quot;:17177,&quot;BLID&quot;:122,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17009,&quot;BLID&quot;:36,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14349,&quot;BLID&quot;:117,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://m.zujuan.xkw.com/gufen/&quot;},{&quot;ID&quot;:16953,&quot;BLID&quot;:37,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16897,&quot;BLID&quot;:47,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17457,&quot;BLID&quot;:132,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17485,&quot;BLID&quot;:133,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17569,&quot;BLID&quot;:136,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17513,&quot;BLID&quot;:134,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17541,&quot;BLID&quot;:135,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16309,&quot;BLID&quot;:116,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gufen/&quot;},{&quot;ID&quot;:14461,&quot;BLID&quot;:45,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14265,&quot;BLID&quot;:118,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/gufen/&quot;},{&quot;ID&quot;:14489,&quot;BLID&quot;:59,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:14517,&quot;BLID&quot;:61,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p791g12.html&quot;},{&quot;ID&quot;:14545,&quot;BLID&quot;:66,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p813g10.html&quot;},{&quot;ID&quot;:16477,&quot;BLID&quot;:41,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16449,&quot;BLID&quot;:67,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16141,&quot;BLID&quot;:96,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16365,&quot;BLID&quot;:97,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1090g12.html&quot;},{&quot;ID&quot;:17625,&quot;BLID&quot;:137,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17597,&quot;BLID&quot;:138,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:17093,&quot;BLID&quot;:139,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;&quot;},{&quot;ID&quot;:16197,&quot;BLID&quot;:143,&quot;BankID&quot;:11,&quot;Url&quot;:&quot;http://zujuan.xkw.com/thematiclist/11p1104g12.html&quot;}]" />
+
+    <!--组卷更新公告弹出层-->
+    <script type="text/javascript">
+
+        $(function () {
+            //新用户引导  
+            //newUserTips();
+            if (!isvisitor) {
+                var c = $.getDateDiff2("d", userinfo.FirstLoginTime, $.getDateTime());
+                if (c <= 1) {
+                    newUserTips();
+                }
+            }
+            ////初始化搜索框内容
+            //$('.search-type a.current').click();
+        });
+
+        // dplus埋码
+        if (dplus_isWork()) {
+
+            if ($.isMobile()) {
+                dplus.track("【移动端】-> 首页");
+            } else {
+                dplus.track("首页");
+            }
+        }
+        $(".container .wrapper").eq(0).removeClass();
+
+        getGradeList(getcookiebankid());
+        //初始化年级
+        function getGradeList(bankId) {
+            var htm = [];
+            var bank = GetQuesBank(bankId);
+
+            var gradeId = 0;
+            if (!isvisitor) {
+                var userId = Cookie.Get("userId");
+                gradeId = parseInt(Cookie.Get("gradeId" + userId));
+            }
+            var tag = 0;
+            for (var x = 0; x < bank.LearnGradeList.length; x++) {
+                var learn = bank.LearnGradeList[x];
+                if (learn.ID == gradeId) {
+                    $("#gradeDiv_txt").text(learn.Name);
+                    htm.push("<a href=\"javascript:;\" class=\"current\" data-grade=\"" + learn.ID + "\">" + learn.Name + "</a>");
+                    tag = 1;
+                    getRecommend(learn.ID);
+                } else {
+                    htm.push("<a href=\"javascript:;\" data-grade=\"" + learn.ID + "\">" + learn.Name + "</a>");
+                }
+            }
+
+            $("#gradeDiv_ui").html(htm.join(''));
+            // 下拉框
+            gradeDown();
+
+            if (tag == 0) {
+                $("#gradeDiv_ui a").last()[0].click();
+            }
+        }
+
+        //下拉框
+        function gradeDown() {
+
+            $(".grade-selection").hover(function () {
+                $(this).children(".grade-selection-down").stop().show();
+            }, function () {
+                $(this).children(".grade-selection-down").stop().hide();
+            });
+
+            $("#gradeDiv_ui a").click(function () {
+                $(this).addClass("current").siblings().removeClass("current");
+                //console.log();
+
+                var parentSilder = $(this).parents('.grade-selection');
+                parentSilder.children('.grade-selection-down').hide();
+
+                $("#gradeDiv_txt").text($(this).text());
+                var gradeId = $(this).data("grade");
+                if (!isvisitor) {
+                    var userId = Cookie.Get("userId");
+                    Cookie.Set("gradeId" + userId, gradeId, 1);
+                }
+                getRecommend(gradeId);
+            });
+        }
+
+        function getRecommend(gradeId) {
+            var bankid = getcookiebankid();
+            var postdate = { gradeId: gradeId, bankId: bankid };
+            var htm = [];
+            $.ajax({
+                url: "?action=getrecommend",
+                type: "get",
+                data: postdate,
+                dataType: "json",
+                success: function (d) {
+                    if (d.papercount > 0) {
+                        var paper = d.PaperList[0];
+                        htm.push(" <li><span>" + paper.LearnGrade.Name + "丨</span><a target=\"_blank\" href=\"/" + bankid + "p" + paper.ID + ".html\">" + paper.Title + "</a></li>");
+                    } else {
+                        htm.push("<li>暂无数据</li>");
+
+                    }
+                    $("#recom_ui").html(htm.join('')); //console.log(d);
+                }, error: function () { }
+            });
+        }
+    </script>
+
+
+    <!-- 雪花 div 开始-->
+    
+    <!-- 雪花 div 结束-->
+    <!-- 雪花 JS 开始-->
+    
+    <!-- 雪花 JS 结束-->
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>
+            <a href="http://www.zxxk.com/" target="_blank" rel="nofollow">学科网首页</a> - <a href="http://about.xkw.com/index"
+                target="_blank" rel="nofollow">关于学科网</a> - <a href="http://kf.zujuan.xkw.com/product"
+                    target="_blank" rel="nofollow">价格体系</a>
+        </p>
+        <p>
+            &copy;2007-2019学科网版权所有 题库自主建设
+        </p>
+        <p>
+            京ICP备12013499号-24
+        </p>
+        <p>
+            <script src="https://s19.cnzz.com/z_stat.php?id=1274198201&web_id=1274198201" language="JavaScript"></script>
+        </p>
+    </div>
+
+    <script type="text/javascript" language="javascript">
+        //声明_czc对象:
+        var _czc = _czc || [];
+        //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+        _czc.push(["_setAccount", "1274198201"]);
+        //登录按钮的操作，当鼠标放到登录按钮上的时候显示出扫码按钮
+        $(function () {
+            if (isvisitor) {
+                //未登录
+                //cnzz自定义访客
+                _czc.push(["_setCustomVar", "是否登录", "未登录", 1]);
+                //_czc.push(["_setCustomVar", "未登录", "访客", 1]);
+            } else {
+                //登录
+                _czc.push(["_setCustomVar", "是否登录", "已登录", 3600 * 24]);
+                //会员
+                var groupId = userinfo.GroupID;
+                switch (userinfo.GroupID) {
+                    case 1:
+                        _czc.push(["_setCustomVar", "登录", "个人普通", 1]);
+                        break;
+                    case 2:
+                        _czc.push(["_setCustomVar", "登录", "个人高级", 1]);
+                        break;
+                    case 3:
+                        _czc.push(["_setCustomVar", "登录", "e卷通高端", 1]);
+                        break;
+                    case 4:
+                        _czc.push(["_setCustomVar", "登录", "e卷通普通", 1]);
+                        break;
+                    case 5:
+                        _czc.push(["_setCustomVar", "登录", "e卷通中端", 1]);
+                        break;
+                }
+            }
+
+            $("#loginBtn").mouseover(function () {
+                if ($(".sao").length == 0) {
+                    $(".loginBtn").after("<a href='' class='sao'><img src='/resource/image/saom.png'/></a>");
+                    $(".sao").css({
+                        "margin-left": "-10px",
+                        "top": "35px",
+                        "position": "absolute",
+                        "height": "57px",
+                        "width": "45px"
+                    }).click(function () {
+                        $(".sao").remove();
+                        window.location.href = "https://sso.zxxk.com/login?login_type=ScanCode&service=" + window.location.href + "";
+                        return false;
+                    }).mouseout(function () {
+                        $(".sao").remove();
+                    });
+                    $('body').click(function () {
+                        $("#header .sao").remove();
+                    })
+                }
+            })
+            //清空细目表的前端数据
+            $("#btn_ximubiao").click(function () {
+
+                XimubiaoCom.Paper.Destroy(getcookiebankid());
+            });
+
+            //试题 试题切换
+            switchTest();
+            //初始化搜索框内容
+            //$('.search-type a.current').click();
+        });
+        function topimgscroll() {
+            var isscroll = Cookie.Get("IsScroll");
+            var maxH = $(".topad").height(),
+                minH = $(".topad-s").height(),
+                step = 5,
+                h = 0;
+
+            var url = window.location.href;
+            if (url.indexOf("Default.aspx") > 0 || url.indexOf("default.aspx") > 0 || url == "http://zujuan.xkw.com/" || url == "http://zujuan.xkw.com") {
+                function adDown() {
+                    if (h < maxH) {
+                        h += step;
+                        setTimeout(adDown, 1);
+                    } else {
+                        setTimeout(adUp, 3000);
+                    }
+                    $(".ad").show().height(h);
+
+                }
+                function adUp() {
+                    $(".ad").height(h);
+                    if (h > minH) {
+                        h -= step;
+                        setTimeout(adUp, 1);
+                    } else {
+                        $(".topad").hide();
+                    }
+                }
+                if (isscroll != null) {
+                    $(".topad").height(0);
+                    $(".ad").show().height(60);
+                } else {
+                    setTimeout(adDown, 100);
+                }
+
+            }
+        }
+        $(function () {
+
+            stickUpNav();
+
+            bindSearchBarEvent();
+
+            //取不到页面标识才去执行随机加载关键字的方法
+            if ($('#SearchLabel').html() == null) {
+                GetKeyWordSendToSearchBox();
+            }
+
+            $('.isSchoolUser').hide();
+            if (!isvisitor) {
+                //判断用户是否绑定学校,未绑定的话,不显示自建题库 2016年12月13日 13:45:30 by:yzl
+                if (userinfo.GroupID > 1) {
+                    $('.isSchoolUser').show();
+                }
+                if (userinfo.GroupID == 3 || userinfo.GroupID == 5) {
+                    $("#myXiMu").show();
+                }
+                // 判断用户是否是E卷通高端，若是，显示作业菜单栏
+                if (userinfo.GroupID == 3) {
+                    $('#homeworkland').show();
+                }
+            }
+        });
+
+        // 注册搜索框单击事件
+        function bindSearchBarEvent() {
+            $(".search-type .sub-key li").click(function () {
+                $('#SearchType').attr('typeval', $(this).attr('data'));
+                $('#SearchType').text($(this).text());
+                $(this).parent().hide();
+                $("input[name='searchCon']").val("");
+
+                GetKeyWordSendToSearchBox();
+            });
+
+
+            $("#searchsubmit").click(function () {
+                searchQuesOrPaper();
+            });
+            $("#keyword").keyup(function (e) {
+                if (e.keyCode == 13) {
+                    var myInput = document.getElementById('keyword');
+                    if (myInput == document.activeElement) {
+                        // loginSubmit();
+                        searchQuesOrPaper();
+                    }
+                }
+            });
+            //控制光标移入移出显示的关键字
+            //$('#keyword').focus(function () {
+            //    var keywordtype = $(this).attr('keywordtype');
+
+            //    if (keywordtype == '1')
+            //    {
+            //        $(this).attr('placeholder', '在这里搜索');
+            //        $(this).attr('keywordtype', '');
+            //        $(this).val('');
+            //    }
+            //}).blur(function () {
+            //    if ($(this).val() == '')
+            //    {
+            //        GetKeyWordSendToSearchBox();
+            //    }
+            //});
+        }
+        //注册试题试卷切换事件
+        function switchTest() {
+
+            $('.search-type a').click(function () {
+                $(this).parent().next().val();
+                $(".header-right .search").removeClass("radius");
+                $(this).addClass('current').siblings().removeClass("current");
+                var type = $(this).data("type");
+                //var keyword = Cookie.Get("keyword" + type);
+                //if (keyword != null) {
+                //    $(this).parent().next().val(keyword);
+                //    return;
+                //}
+                $(this).parent().next().attr('placeholder', '请输入要搜索的试题内容/关键字');
+            });
+            $('.search-type a').eq(1).click(function () {
+                $(this).parent().next().val();
+                $(".header-right .search").addClass("radius");
+                var type = $(this).data("type");
+                //var keyword = Cookie.Get("keyword" + type);
+                //if (keyword != null) {
+                //    $(this).parent().next().val(keyword);
+                //    return;
+                //}
+                $(this).parent().next().attr('placeholder', '请输入要搜索的试卷名称/关键字');
+            });
+        }
+
+        function searchQuesOrPaper() {
+
+            var keyword = $("#keyword").val();
+
+            if ($.trim(keyword).length <= 0) {
+                return;
+            }
+            if ($.trim(keyword).length > 40) {
+                keyword = keyword.substr(0, 40);
+            }
+            var searchType = $(".search-type a.current").data("type");//$("#SearchType").attr("typeval");
+            if (2 == searchType) { //试题         
+
+                if (dplus_isWork()) {
+                    if ($.isMobile()) {
+                        dplus.track("【移动端】-> 试题搜索", { "关键字": $.trim(keyword) });
+                    } else {
+                        dplus.track("试题搜索", { "关键字": $.trim(keyword) });
+                    }
+                }
+                Cookie.Set("keyword" + searchType, keyword, 1);
+                location.href = "/quessearch/?keyword=" + keyword + "&typeval=" + searchType;
+
+            } else {
+                // 试卷  
+                if (dplus_isWork()) {
+                    if ($.isMobile()) {
+                        dplus.track("【移动端】-> 试卷搜索", { "关键字": $.trim(keyword) });
+                    } else {
+                        dplus.track("试卷搜索", { "关键字": $.trim(keyword) });
+                    }
+                }
+                Cookie.Set("keyword" + searchType, keyword, 1);
+                location.href = "/papersearch/?keyword=" + keyword + "&typeval=" + searchType;
+            }
+        }
+        function stickUpNav() {
+            //用于将导航条固定在页面顶部，如果子页面需要.
+            var navBar = $("#navBar"),
+                d = $(document),
+                w = $(window);
+            var defaultwidth = $("#navBar").width();
+
+            var navHeight, navOffsetTop;
+
+            try {
+                navHeight = navBar.height(),
+                    navOffsetTop = navBar.offset().top;
+            } catch (e) {
+
+            }
+
+            //选题按钮的动画效果
+            liveAddquesBtn();
+            liveDelquesBtn();
+
+            w.resize(function () {
+                var s = d.scrollTop();
+                //添加窗体大小改变事件,调整一些元素的位置
+                if (navBar.hasClass("box_show")) {
+                    var navOffsetLeft = $(".logo").offset().left - 0;
+                    //navBar.css("left", navOffsetLeft);
+                    navBar.css('position', '')
+                }
+            });
+            if (navigator.userAgent.indexOf("MSIE 6.0") < 0) {
+                w.scroll(function () {
+                    var s = d.scrollTop();
+
+                    //控制菜单的固定
+                    if (s <= navOffsetTop) {
+                        //滚动位置未到
+                        if (navBar.hasClass("box_show")) {
+                            navBar.removeClass("box_show");
+                            navBar.css("margin-top", 0);
+                            $("#navBarPlaceHolder").remove();
+                            $(".zxzy").show();
+                        }
+                        ChangeShoppingCartPosition(false);
+                    }
+                    else {
+                        //固定
+                        navBar.addClass("box_show");
+                        if ($("#navBarPlaceHolder").length <= 0) {
+                            //添加一个原显示元素的占位，不然会出现抖动的情况
+                            $(".logo").after("<div id='navBarPlaceHolder' class='subnav'></div>");
+                        }
+                        // navBar.css("z-index", 9);
+                        var navOffsetLeft = $(".logo").offset().left - 0;
+                        navBar.css("margin-top", 0)
+                            .css('width', w.width());
+                        //移动试题篮
+                        ChangeShoppingCartPosition(true);
+                        $(".zxzy").hide();
+                    }
+                });
+            }
+        }
+        function ChangeShoppingCartPosition(bNav) {
+            var cartHolder = $("#shoppingCartHolder");
+            var cart = $("#shoppingCart");
+            //改变试题篮所在的位置 bNav,是否移到菜单条上
+            if (bNav) {
+                if ($("#shoppingCartHolder>#shoppingCart").is("*") === false) {
+                    cartHolder.append(cart);
+                    //  cart.css("margin", "6px 0 0");
+                }
+            } else {
+                if ($("#shoppingCartHolder>#shoppingCart").is("*")) {
+                    //$("#logo").append(cart);
+                    $('.cmn_search_box').first().before(cart);
+                    cart.css("margin", "");
+                }
+            }
+        }
+        function liveAddquesBtn() {
+            $(document).on("click", ".addques", function () {
+                //得到id值
+                var id = $(this).attr("id").replace("quesselect", "quesdiv");
+                var ques = $("#" + id + ">.quesbody");
+                var top = ques.offset().top, left = ques.offset().left,
+                    width = ques.width(), height = ques.height();
+                //得到试题篮的位置
+                var cart = $("#shoppingCart");
+                var ttop = cart.offset().top, tleft = cart.offset().left,
+                    twidth = cart.width(), theight = cart.height();
+
+                var cloneQues = ques.clone().appendTo('body');
+                cloneQues.css("position", "absolute")
+                    .css('top', top + (height - 80))
+                    .css('left', left)
+                    .css('border', '1px solid #00A2E6')
+                    .css('background-color', '#F2F2F2')
+                    .css('width', '700px')
+                    .css('overflow', 'hidden')
+                    .css('height', '80px')
+                    .css('z-index', '9999');
+
+
+                cloneQues.animate({
+                    left: (tleft) + "px", top: ttop + "px", opacity: "0",
+                    width: twidth, height: theight
+                },
+                    500,
+                    function () {
+                        //将clone删除掉
+                        cloneQues.remove();
+                    });
+            });
+        }
+        function liveDelquesBtn() {
+            //移除试题
+            $(document).on("click", ".delques", function () {
+                var id = $(this).attr("quesid");
+
+                var ques = $("#quesdiv" + id + ">.quesbody");
+                var ttop = ques.offset().top, tleft = ques.offset().left, width = ques.offset().width
+                twidth = ques.width(), theight = ques.height();
+                //得到试题篮的位置
+                var cart = $("#shoppingCart");
+                var top = cart.offset().top, left = cart.offset().left;
+
+                var cloneQues = ques.clone().appendTo('body');
+                cloneQues.css("position", "absolute")
+                    .css('top', top)
+                    .css('left', left)
+                    .css('background-color', '#F2F2F2')
+                    .css('border', '1px solid #00A2E6')
+                    .css('width', cart.width())
+                    .css('overflow', 'hidden')
+                    .css('height', cart.height())
+                    .css('z-index', '9999');
+
+                cloneQues.animate({
+                    left: (tleft) + "px", top: ttop + "px", opacity: "1",
+                    width: twidth, height: theight
+                }, 500,
+                    function () {
+                        //将clone删除掉
+                        cloneQues.remove();
+                    });
+            });
+        }
+
+        function Favorite(parameters) {
+            var url = window.location;
+            var title = document.title;
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.indexOf("360se") > -1) {
+                alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+            }
+            else if (ua.indexOf("msie 8") > -1) {
+                window.external.AddToFavoritesBar(url, title); //IE8
+            }
+            else if (document.all) {
+                try {
+                    window.external.addFavorite(url, title);
+                } catch (e) {
+                    alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+                }
+            }
+            else if (window.sidebar) {
+                window.sidebar.addPanel(title, url, "");
+            }
+            else {
+                alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+            }
+        }
+
+        /* 注册单击名校卷事件*/
+        $('#hundredNav').click(function () {
+            // dplus埋码        
+            if (dplus_isWork()) {
+                if ($.isMobile()) {
+                    dplus.track("【移动端】-> 名校专区");
+                } else {
+                    dplus.track("进入名校卷专区");
+                }
+            }
+
+            var bankId = getcookiebankid();
+            bankId = bankId < 10 ? '0' + bankId : bankId;
+            var hightBankIds = '10,11,12,13,14,15,16,17,18,';
+            var midBankIds = '01,02,03,04,05,06,07,08,09,';
+
+            if (hightBankIds.indexOf(bankId + ',') > -1) {
+                location.href = '/topschool/';
+            }
+            else if (midBankIds.indexOf(bankId + ',') > -1) {
+                //alert('初中名校试题请您到“手动选题-按章节”挑选，谢谢！');
+                //alert('初中名校卷专区正在筹备中，请切换高中学科后尝试');
+                location.href = '/topschool/';
+            }
+            else {
+                alert('当前学科无名校卷数据，请选择初高中学科进入。');
+            }
+        });
+
+        //手动选题 - 自建题库选题
+        $('#btnzijiantiku').click(function () {
+            if (dplus_isWork()) {
+                if ($.isMobile()) {
+                    dplus.track("【移动端】-> 自建题库选题");
+                } else {
+                    dplus.track("自建题库选题");
+                }
+            }
+
+            location.href = '/zijiantiku/';
+        });
+
+        function zsdClick() {
+            // dplus埋码
+            if (dplus_isWork()) {
+                if ($.isMobile()) {
+                    dplus.track("【移动端】-> 手动选题");
+                } else {
+                    dplus.track("手动选题");
+                }
+            }
+            window.location.href = '/zhishidian/';
+        }
+
+        function tsztClick() {
+            // dplus埋码
+            if (dplus_isWork()) {
+                if ($.isMobile()) {
+                    dplus.track("【移动端】-> 特色专题");
+                } else {
+                    dplus.track("特色专题");
+                }
+            }
+            window.open('/thematiclist');
+            //window.open('/web/zhuantihuizong.html');
+        }
+
+        function gkzjurl() {
+            var bankid = Cookie.Get("bankId");
+            var bankpy = GetBankNamePYByBankId(bankid);
+            window.open("/" + bankpy + "/shijuan/g12t12/");
+            //window.location.href = "/" + bankpy + "/shijuan/g12t12/"
+        }
+
+        $(".close-btn").click(function () {
+            $(".gg_gaokao").hide();
+            return false;
+        })
+        //解决移动端触屏菜单点击改为下拉
+        function MenuGotoTarget(obj, a_val) {
+            var touchObj = {};
+            touchObj.isSupportTouch = "ontouchend" in document ? true : false;
+            touchObj.isEvent = touchObj.isSupportTouch ? 'touchstart' : 'click';
+            if (touchObj.isEvent == "click") {
+                location.href = a_val;
+            } else {
+                $(obj).parent().mouseover();
+            }
+        }
+    </script>
+
+    <!-- 右侧悬浮 -->
+
+    
+
+    
+
+    <div class="panel">
+        <a href="javascript:onKST();" rel="nofollow">
+            <i class="icon icon-service"></i>
+        </a>
+        <a href="javascript:videodiv();" rel="nofollow">
+            <i class="icon icon-video"></i>
+        </a>
+        <a href="http://kf.zujuan.xkw.com/helper/7" rel="nofollow" target="_blank">
+            <i class="icon icon-help"></i>
+        </a>
+        <a href="javascript:void(0);" class="weixin">
+            <i class="icon icon-wechat"></i>
+            <div class="weixin-img">
+                <img src="/resource/Static_180116/image/weixin.jpg " class="qrcode" alt="关注官方微信 ">
+            </div>
+        </a>
+        <a href="javascript:void(0);" id="gotop">
+            <i class="icon icon-back"></i>
+        </a>
+    </div>
+
+    
+    
+    
+    <div style="display: none;">
+        <script type="text/javascript" src="/resource/js/baidu_share.js?t=20190628"></script>
+        <script type="text/javascript" src="/resource/js/baidu_zujuan.js?t=20190628"></script>
+    </div>
+    
+    <span id='cnzz_stat_icon_1261546733'></span>
+    <script src='http://w.cnzz.com/q_stat.php?id=1261546733' type='text/javascript'></script>
+    
+</body>
+</html>
+<script src="/resource/js/onKST.js"></script>
+
+<script src="/resource/Static_180116/font/iconfont.js"></script>
+<script type="text/javascript">
+    $("#gotop").click(function () {
+        var speed = 200;//滑动的速度
+        $('body,html').animate({ scrollTop: 0 }, speed);
+        return false;
+    });
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+
+    if (window.location.pathname == "/zujuan/") {
+        $(".panel").hide();
+    }
+
+    $("table[name='optionsTable']").css("font-size", "14px");
+    $(".quesbody").find("table").css("font-size", "14px");
+    // 试题栏添加滚动条 2017-01-11 9:45:12 by 黄平勇 
+    window.onload = function () {
+        //美化滚动条
+        //$("#quescountdetail").niceScroll({
+        //    cursoropacitymin: 0.5,
+        //    cursorcolor: '#a6a5a5'
+        //});
+        // 等待图片加载完成再处理样式，否则会出现遮罩层高度不够的情况 2016-09-22 by 黄平勇 
+        if (typeof restoreQuesStyle == "function") {
+            restoreQuesStyle();
+        }
+    };
+
+    $(function () {
+
+
+        //右下角 悬浮导航 展开 收起
+        $('.panelmain .close').on('click', function () {
+            $(this).parent().slideUp();
+            $('.panetop .open-pane').fadeIn(800);
+        })
+        $('.panetop .open-pane').on('click', function () {
+            $('.panelmain').slideDown();
+            $(this).fadeOut(500);
+        })
+
+        $('.panetop i').on('click', function () {
+            $(this).parent().parent().animate({ "width": "0px", "opacity": "0.3" });
+            $('.panesild').animate({ "width": "18px", "opacity": "1" });
+        })
+        $('.panesild').on('click', function () {
+            $(this).animate({ "width": "0px", "opacity": "0" })
+            $('.panelN').animate({ "opacity": "1", "width": "92px" });
+        })
+
+
+        var bankId = getcookiebankid();
+        var eduId = GetQuesBank(bankId).EduID;
+
+        if (eduId == 1 || eduId == 2) {
+            $("#gaokao").html("<a href=\"/zkzq/\">中考专区</a>");
+        }
+        changeHelp();
+        urladdground();
+        //个人用户显示订单列表 2017-07-28 10:19:22 by:yzl
+        if (isvisitor) {
+            $(".dingdan").hide();
+        }
+        if (usergroup.GroupID > 2) {
+            //$(".dingdan").hide();
+            //添加学校用户提示，如果绑定IP的学校用户就拿当前登录IP和开通IP效验，不通过就提示 by wcy  2017/11/7
+            if (userinfo.CreatePaperIpList.length > 0 && Cookie.Get("SchoolBandIP") == null) {
+                if (userinfo.CreatePaperIpList.indexOf(userloginip) == "-1") {
+                    Alert("<span style=\"font-size:14px;\">注：当前登录IP与您绑定的IP不符，<br /><span style=\"font-size:14px;color: #666666;\">可能影响您使用，如有问题请与<a href=\"http://www.zxxk.com/service/Info.aspx?InfoID=351403\" target=\"_blank\" style=\"color: red;font-weight: bold;text-decoration:underline\">学科网客服</a>联系。</span></span>");
+                    Cookie.Set("SchoolBandIP", userloginip, 1);
+                }
+            }
+        }
+
+        //只有中端和高端才会不显示订单 [2019-01-11 10:39:08 by:yzl]
+        if (usergroup.GroupID == 5 || usergroup.GroupID == 3) {
+            $(".dingdan").hide();
+        }
+
+        if ($("#btnLoginOut").length > 0) {
+
+            function pist() {
+                var hintleft = ($("body").width() - $(".bg-pop-hint").width()) / 2;
+                var top = ($(".bg-pop").height() - $(".bg-pop-hint").height()) / 2 - 100;
+                $(".bg-pop-hint").css({ "left": hintleft, "top": top });
+            }
+            pist();
+            $(window).resize(function () {
+                pist();
+            })
+
+            var hideme = function () {
+                $(".bg-pop").hide();
+                $(".bg-pop-hint").hide();
+            }
+            $(".bg-pop").on("click", function () {
+                hideme();
+                Cookie.Set("bgpop", "true", 1);
+            })
+            $(".bg-pop-hint h3 a").click(function () {
+                hideme();
+                Cookie.Set("bgpop", "true", 1);
+            })
+            $(".logout-btn").click(function () {
+                $(".bg-pop").show();
+                $(".bg-pop-hint").show();
+            })
+            $('#btn').click(function () {
+                hideme();
+                Cookie.Set("bgpop", "true", 1);
+                window.location.href = 'https://sso.zxxk.com/login?bindingService=true&service=' + window.location.href + '?ser=ok';
+            })
+
+        }
+
+        FirstLoginActivityInit();
+    });
+
+    function enterToZujuanCenter() {
+        window.location.href = '/zujuan';
+    }
+    //根据url改变帮助跳转链接
+    function changeHelp() {
+        var urlname = window.location.pathname;
+        var id = 7;
+        if (urlname == '/' || urlname == '/default.aspx') {
+            id = 7;
+        }
+        else if (/zsd/.test(urlname) || /zj/.test(urlname) || /shijuan/.test(urlname) || /zhineng/.test(urlname) || /jzhineng/.test(urlname) || /tongbujuan/.test(urlname)) {
+            id = 8;
+        }
+        else {
+            id = 2;
+        }
+        $(".help").attr("href", "http://kf.zujuan.xkw.com/helper/" + id + "");
+    }
+    //根据url添加选中状态
+    function urladdground() {
+        var urlname = window.location.pathname;
+        var name = "";
+        if (urlname == '/' || urlname == '/default.aspx') {
+            name = "#index";
+        } else if (/zsd/.test(urlname) || /jtff/.test(urlname))
+        {
+            name = "#zsd";
+        }
+        else if (/zj/.test(urlname) || /tongbujuan/.test(urlname) || /jx/.test(urlname) || /vd(\d+)/.test(urlname) || /tzyd/.test(urlname)) {
+            name = "#zj";
+        }
+        else if (/thematiclist/.test(urlname) || /tongbushijuan/.test(urlname)) {
+            name = "#zhuanti";
+        }
+        else if (/gufen/.test(urlname) || /colleges/.test(urlname) || /zhuanye/.test(urlname) || /gufen/.test(urlname) || /proscore/.test(urlname) || /gkzq/.test(urlname) || /gaokaoshijuan/.test(urlname) || /zhenti/.test(urlname) || /zkzq/.test(urlname)) {
+            name = "#gaokao";
+        }
+        else if (/shijuan/.test(urlname)) {
+            name = "#shijuan";
+        }
+        //else if (/jzhineng/.test(urlname)) {
+        //    name = "#top_ximubiao";
+        //}
+        //else if (/zhineng/.test(urlname)) {
+        //    name = "#zhineng";
+        //}
+        else if (/basic/.test(urlname) || /setting/.test(urlname) || /selection/.test(urlname) || /preview/.test(urlname)) {
+            name = "#top_ximubiao";
+        }
+        else if (/zhineng/.test(urlname) || /jzhineng/.test(urlname)) {
+            name = "#zhineng";
+        }
+        else if (/topschool/.test(urlname)) {
+            name = "#hundredNavSchool";
+        }
+
+        else if (/wode/.test(urlname) || /xinxi/.test(urlname) || /anquan/.test(urlname) || /dingdan/.test(urlname) || /shoucang/.test(urlname) || /cundang/.test(urlname) || /jilu/.test(urlname) || /zijiantikuupload/.test(urlname) || /zijiantikuinfo/.test(urlname) || /zijiantiku/.test(urlname) || /yijian/.test(urlname) || /ximubiao/.test(urlname) || /usehistory/.test(urlname) || /banji/.test(urlname) || /zuoye/.test(urlname)) {
+            name = "#myPaper";
+        }
+        else if (/banji/.test(window.location.pathname)) {
+            name = "#banji";
+        }
+        $(name).addClass('current');
+    }
+    // 提示用户登陆
+    function promptLogin() {
+        if (confirm('限免试卷登录后即可下载，是否登录？')) {
+            logindiv();
+        }
+    }
+    // 记录限免试卷下载 2017-01-06 8:34:15 by 黄平勇 
+    function recordDownloadInfo(freePaperId) {
+        var userId = Cookie.Get('userId');
+        if (!userId || !freePaperId) {
+            return;
+        }
+        var postData = { userId: userId, freePaperId: freePaperId };
+        $.ajax({
+            url: "/web/HundredSchoolIndex.aspx?action=RecordDownloadInfo",
+            type: "POST",
+            data: postData,
+            async: true,//同步                
+            cache: false,//不缓存
+            beforeSend: function () {
+            },
+            success: function (data) {
+            },
+            error: function () {
+            }
+        });
+    }
+
+    /*新版支付框*/
+    function PayDialog(event) {
+
+        if (isvisitor) {
+            logindiv();
+        } else {
+
+            if (userinfo.saleMode == 3) {
+                Alert('您是机构合作模式用户,不需要充值!');
+                return;
+            }
+
+            Cookie.Del("payPageObj");
+            var content = "<iframe src='/Web/zujuanPayment/Paydialog.aspx?rnd=" + Math.random() + "' scrolling='no' frameborder='0' width='100%' height='590' />";
+            new Dialog(content, {
+                title: "升级充值",
+                dialogWidth: "713px"
+            }).show();
+        }
+
+        try {
+            event.stopPropagation();
+        } catch (e) {
+
+        }
+    }
+
+    /*新版支付框*/
+    function PayDialogToCashUpgrade(event) {
+
+
+        if (isvisitor) {
+            logindiv();
+        } else {
+
+            if (userinfo.saleMode == 3) {
+                Alert('您是机构合作模式用户,不需要充值!');
+                return;
+            }
+
+            Cookie.Del("payPageObj");
+            var content = "<iframe src='/Web/zujuanPayment/Paydialog.aspx?flag=cashUpgrade&rnd=" + Math.random() + "' scrolling='no' frameborder='0' width='100%' height='590' />";
+            new Dialog(content, {
+                title: "升级充值",
+                dialogWidth: "713px"
+            }).show();
+        }
+
+        try {
+            event.stopPropagation();
+        } catch (e) {
+
+        }
+    }
+
+    //教师节首次登陆领取一个月会员活动入口
+    function FirstLoginActivityInit() {
+        if (isvisitor) { return; }
+
+        var userId = Cookie.Get('userId');
+        var postData = { userId: userId };
+        $.ajax({
+            url: "/Web/Handler1.ashx?action=firstloginactivityisshow",
+            type: "POST",
+            data: postData,
+            beforeSend: function () {
+            },
+            success: function (data) {
+                if (data == "True") {
+                    $('.panelmain').prepend('<a href="javascript:FirstLoginActivityDialog()">领会员</a>');
+                    if (Cookie.Get('flaDiv') != null) { return; }
+
+                    FirstLoginActivityDialog();
+                }
+            },
+            error: function () {
+            }
+        });
+    }
+
+    function FirstLoginActivityEvent() {
+
+        //切换学科
+        $('.grade .subject a').click(function () {
+            $(this).addClass('on').siblings().removeClass('on');
+            $(this).addClass('on').parents(".grade").siblings().find(".subject").children().removeClass('on');
+        });
+
+        //稍后领取 和 关闭按钮
+        $('.btnFirstLoginClose').click(function () {
+            $('.flaDiv').remove();
+            Cookie.Set('flaDiv', '1', 7);
+        });
+
+        //现在领取
+        $('.btnFirstLoginReceive').click(function () {
+            var bankid = $('.grade .subject a.on').attr('bankid');
+            var userId = Cookie.Get('userId');
+
+            var postData = { userId: userId, bankId: bankid };
+            $.ajax({
+                url: "/Web/Handler1.ashx?action=firstloginactivityadd",
+                type: "POST",
+                data: postData,
+                beforeSend: function () {
+                },
+                success: function (data) {
+                    $.jBox.tip(data, "success", { timeout: 1000 });
+                    setTimeout(function () { window.location.reload(); }, 1000);
+
+                },
+                error: function () {
+                }
+            });
+        });
+    }
+
+    //Dialog HTML
+    function FirstLoginActivityDialog() {
+        var html = [];
+        html.push('<div class="overlay flaDiv"></div>');
+        html.push('<div class="popup-free flaDiv">');
+        html.push('    <div class="popup-hd">欢迎您首次登录组卷网，现有<span class="yellow">一个月免费会员</span>等您领取！</div>');
+        html.push('        <i class="close btnFirstLoginClose">&times;</i>');
+        html.push('        <div class="popup-bd">');
+
+        var eduList = edu;
+
+        if (eduList[0].ID == 1) {
+            eduList = eduList.reverse()
+        }
+
+        for (var i = 0; i < eduList.length; i++) {
+
+            var classname = i == 0 ? ' senior ' : i == 1 ? ' junior ' : i == 2 ? ' primary ' : '';
+            html.push('          <div class="grade ' + classname + '">');
+            html.push('            <div class="grade-hd">' + eduList[i].Name + '</div>');
+            html.push('            <div class="subject">');
+
+            var quesBankList = eduList[i].QuesBankList;
+            for (var j = 0; j < quesBankList.length; j++) {
+
+                var quesBankId = quesBankList[j].ID;
+
+                var currentTemp = '';
+
+                if (quesBankId == parseInt(Cookie.Get('bankId'))) {
+                    currentTemp = ' on ';
+                }
+
+                html.push('<a href="javascript:;" bankid="' + quesBankId + '" class="' + currentTemp + '">' + quesBankList[j].Subject + '</a>');
+            }
+
+            html.push('            </div>');
+            html.push('          </div>');
+        }
+
+        html.push('      <div class="note">');
+        html.push('        <p><span class="note-hd">说明：</span>1.本活动仅针对首次登录组卷网的新用户；</p>');
+        html.push('        <p>2.选择学科后，可领取指定学科的一个月高级会员权限；</p>');
+        html.push('        <p>3.关闭本页面后可在右侧点击"领会员"重新领取；</p>');
+        html.push('        <p>4.新用户充值高级会员后不可参与此活动。</p>');
+        html.push('      </div>');
+        html.push('      <div class="buttons">');
+        html.push('        <a href="javascript:void(0);" class="btn-confirm btnFirstLoginReceive">现在领取</a>');
+        html.push('        <a href="javascript:void(0);" class="btn-cancel btnFirstLoginClose">稍后领取</a>');
+        html.push('      </div>');
+        html.push('    </div>');
+        html.push('  </div>');
+
+        $('#userState').after(html.join(""));
+
+        FirstLoginActivityEvent();
+    }
+
+</script>
+<script src="/resource/Static_180116/js/common.js?t=20190628"></script>
+<script src="/resource/Static_180116/js/slick.min.js?t=20190628"></script>
+
+<script src="/resource/js/zujuantemp.js?t=20190628"></script>
